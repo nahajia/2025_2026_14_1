@@ -47,5 +47,70 @@ WHERE varostipus.vtip="megyei jogú város";
 
 5 találat
 
+7.
+SELECT AVG(varos.nepesseg)
+FROM varos;
+20335.6098
 
+8.
+SELECT AVG(varos.nepesseg)
+FROM varos 
+INNER JOIN megye
+ON varos.megyeid=megye.id 
+WHERE megye.mnev="Pest" OR megye.mnev="Budapest";
+47342.0727
+9.
 
+SELECT AVG(varos.nepesseg)
+FROM varos
+INNER JOIN megye
+ON megye.id=varos.megyeid
+WHERE megye.mnev="Szabolcs-Szatmár-Bereg";
+
+10831.7143
+
+10.
+
+SELECT varos.vnev,varos.terulet
+FROM varos
+INNER JOIN megye
+ON megye.id=varos.megyeid
+WHERE megye.mnev="Somogy"  
+ORDER BY `varos`.`terulet` DESC
+LIMIT 1;
+
+Siófok 124.66
+
+Másik
+
+SELECT varos.vnev,varos.terulet
+FROM varos
+WHERE varos.terulet=(SELECT MAX(varos.terulet)
+FROM varos
+INNER JOIN megye
+ON megye.id=varos.megyeid
+WHERE megye.mnev="Somogy");
+
+Siófok 124.66
+
+11.
+
+SELECT COUNT(varos.id)
+FROM varos
+INNER JOIN varostipus
+ON varostipus.id= varos.vtipid
+WHERE varostipus.vtip ='megyei jogú város';
+
+5
+
+12.
+
+SELECT megye.mnev, COUNT(varos.id) AS 'Darab'
+FROM varos
+INNER JOIN megye
+ON megye.id = megyeid
+GROUP BY megye.mnev;
+
+találat 20
+
+13.
