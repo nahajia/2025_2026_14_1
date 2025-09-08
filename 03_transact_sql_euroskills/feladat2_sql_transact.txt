@@ -1,12 +1,12 @@
 
-Szakmánként a legjobbak legyenek új 5 oszlopos táblában megjelenítve:
-szakma neve, versenyző neve, ország neve, pontszáma és utolsó oszlopban 
+Szakmánként a legjobbak legyenek új táblában megjelenítve:
+szakma neve, pontszáma és utolsó oszlopban 
 egy + jel, ha Informatika vagy Web szakmákban nyert, - ha nem. 
 Rendezett legyen pont alapján csökkenő.
 
 1. tranzakció, segéd tábla a szakmájában legjobbakra, szakma és pont, group by
 ideiglenes-temporary táblával készítsd elő
-2. versenyző neve és ország neve is be legyen véve, group by-ban is!
-3. rendezés, pont, csökkenő
+2. rendezés, pont, csökkenő
 4. új tábla, ami ezt kérdezi le, oszlopokra kell hivatkozni, ezért "as" kell
 5. utolsó oszlop, if (felt, igaz, hamis)
+
