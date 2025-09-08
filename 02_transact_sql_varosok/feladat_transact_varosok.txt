@@ -1,0 +1,38 @@
+1. Készíts nézettáblát, amely Borsod megyei városok
+ nevét, népességét tartalmazza és 3. oszlopban a kicsi szót, ha 5000 fő alatti
+
+2. Készíts nézettáblát, amely megyénként meghatározza a legnagyobb népességű város népességét,
+jelenjen meg megye neve, a legnagyobb népesség, 
+3. oszlopban kicsi/közepes/nagy (50000 alatt, 100000 felett )
+
+3. Mi annak a városnak a neve az országban, amely 
+a megye legnépesebbjei közül a legnépesebb, 
+feltételezd, hogy a legnagyobb népességszám egyedi
+(Budapest ne számítson)
+Megyék szerint határozd meg a legnagyobb népességű város népességét
+Budapestet hagyd ki (limit 1 offset 1)
+Tárold le a népességét változóban!
+Írd ki a letárolt népességű város nevét, népességét.
+
+4. Határozd meg megyénként a legkisebb népességű város népességét,
+ mi ezek közül a legnagyobb, 
+tárold le változóban a megye nevét,
+majd tárold le egy változóban a népességet.
+Listázd ki mi annak a településnek a neve, népessége, megyéje, amely a megyék legkisebb
+népességű települései közül a legnagyobb.
+
+Segítség:
+változó: 
+SET @nev = 100;
+
+if (felt, igaz, hamis)
+
+
+CASE
+    WHEN felt THEN ertek
+    WHEN felt THEN ertek
+END
+
+több utasítás esetén ( ;- el zárni az utasításokat): 
+START TRANSACTION;
+COMMIT;

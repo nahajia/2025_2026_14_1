@@ -1,0 +1,21 @@
+1. 
+Tárolt eljárásba ( hatszazKerdez()) tegyük azt a lekérdezést, amely lekérdezi a
+600 pont feletti versenyzők nevét, pontját, szakmáját!
+
+2. 
+Tárolt eljárásba ( pontKerdez(parameter)) tegyük azt a lekérdezést, amely lekérdezi a
+paraméterként megadott pont feletti versenyzők nevét, pontját, szakmáját! 
+
+3. 
+Tárolt eljárásba( fejlesztoKerdez()  ) tegyük a lekérdezést, 
+mely kilistázza az összes fejlesztő szót tartalmazó szakmájú versenyző nevét, szakmáját!
+
+4. 
+Tárolt eljárásba ( szakmaKerdez(parameter) pl. szakma("fejlesztő"))
+tegyünk lekérdezést, mely kilistázza a paraméterként megadott szórészletet tartalmazó szakmájú 
+versenyzők nevét, szakmáját!
+
+5. 
+Tárolt eljárásba ( magyarKerdez()) lekérdezés, mely lekérdezi új táblába a magyar versenyzők nevét, 
+pontját, országát! Hozzon létre új nézet táblát eredményként (magyarTabla)! 
+

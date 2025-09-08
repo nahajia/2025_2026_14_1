@@ -1,0 +1,5 @@
+
+Tárolt elj, tanulónként összes leadás, név, összmennyiség, 
+3. oszlopban Sok/Jó ez is /Gyűjts többet szöveg (10000/5000)
+(2 megoldás: case/if)
+

@@ -1,0 +1,14 @@
+
+Országonként max pontot elért versenyzõk díjazásban
+részesülnek, aki 750pont feletti 2000$-t kap, 
+700 felett 1000$ és 650 felett 500$, ez alatt nincs díjazás.
+
+1. országonként group by és max
+2. ideiglenes seged1 táblába tegye
+3. változók a határpontokhoz
+4. új select azokra akik max pontosak az országban, on után ország és pont
+5. case a pontok vizsgálatára és $ értéke
+6. eredmény create table-el új táblába kerül, dijazas a neve
+
+------------------------------------------
+
