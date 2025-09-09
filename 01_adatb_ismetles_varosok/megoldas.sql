@@ -128,15 +128,18 @@ ON varos.megyeid=megye.id
 WHERE megye.mnev="Vas"  
 ORDER BY `varos`.`nepesseg` DESC  
 LIMIT 1;
+
 Szombathely
 Másik megoldás:
+
 SELECT varos.vnev, varos.nepesseg,varos.terulet
+FROM varos
+where varos.nepesseg=(SELECT max(varos.nepesseg)
 FROM varos
 INNER JOIN megye
 ON varos.megyeid=megye.id
-WHERE megye.mnev="Vas"  
-ORDER BY `varos`.`nepesseg` DESC  
-LIMIT 1;
+WHERE megye.mnev="Vas" ) 
+
 15.
 SELECT varos.vnev,varos.nepesseg
 from varos
