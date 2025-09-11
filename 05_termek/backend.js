@@ -99,6 +99,101 @@ app.post('/tipusSzerint', (req, res) => {
         return res.status(200).json(result)
     })
 })
+//adott ártól drágább termékek neve, ára
+app.post('/termekArNagyobb', (req, res) => {
+    const sql=`
+        select termek.termek_nev,termek.termek_ar
+        from termek
+        where termek.termek_ar>?;
+        `
+      pool.query(sql,[req.body.tipus_ar] , (err, result) => {
+        if (err){
+          console.log(err)
+          return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+          return res.status(404).json({error:"Nem található adat!"})
+        }
+
+        console.log(result)
+        return res.status(200).json(result)
+    })
+})
+//adott terméktípusra, amely egy adott ártól drágább
+app.post('/tipusArSzerint', (req, res) => {
+    const {tipus_nev,termek_ar} =req.body
+    const sql=`
+        select *
+        FROM termek
+        inner join tipus
+        on termek.termek_tipus=tipus.tipus_id
+        where tipus.tipus_nev=? and termek.termek_ar>?
+        `
+      pool.query(sql,[tipus_nev,termek_ar] , (err, result) => {
+        if (err){
+          console.log(err)
+          return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+          return res.status(404).json({error:"Nem található adat!"})
+        }
+
+        console.log(result)
+        return res.status(200).json(result)
+    })
+})
+//adott típusnevű, adott ártól olcsóbb
+app.post('/tipusArOlcsobb', (req, res) => {
+    const {bevitel1,bevitel2} =req.body
+    const sql=`
+        select *
+        FROM termek
+        inner join tipus
+        on termek.termek_tipus=tipus.tipus_id
+        where tipus.tipus_nev=? and termek.termek_ar<?
+        `
+      pool.query(sql,[bevitel1,bevitel2] , (err, result) => {
+        if (err){
+          console.log(err)
+          return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+          return res.status(404).json({error:"Nem található adat!"})
+        }
+
+        console.log(result)
+        return res.status(200).json(result)
+    })
+})
+//új tipus felvitele
+app.post('/tipusFelvitel', (req, res) => {
+    const {bevitel1} =req.body
+    const sql=`insert into tipus values (null,?)`
+    pool.query(sql,[bevitel1] , (err, result) => {
+        if (err){
+          console.log(err)
+          return res.status(500).json({error:"Hiba"})
+        }
+        console.log(result)
+        return res.status(201).json({message:"Sikeres felvitel!"})
+    })
+})
+//új termék felvitele
+app.post('/termekFelvitel', (req, res) => {
+    const {termek_nev,termek_ar,termek_tipus} =req.body
+    const sql=`insert into termek values (null,?,?,?)`
+    pool.query(sql,[termek_nev,termek_ar,termek_tipus] , (err, result) => {
+        if (err){
+          console.log(err)
+          return res.status(500).json({error:"Hiba"})
+        }
+        console.log(result)
+        return res.status(201).json({message:"Sikeres felvitel!"})
+    })
+})
+
+
+
 
 
 app.listen(port, () => {
