@@ -174,7 +174,6 @@ app.post('/tipusFelvitel', (req, res) => {
           console.log(err)
           return res.status(500).json({error:"Hiba"})
         }
-        console.log(result)
         return res.status(201).json({message:"Sikeres felvitel!"})
     })
 })
@@ -187,11 +186,21 @@ app.post('/termekFelvitel', (req, res) => {
           console.log(err)
           return res.status(500).json({error:"Hiba"})
         }
-        console.log(result)
         return res.status(201).json({message:"Sikeres felvitel!"})
     })
 })
-
+//termék törlése
+app.delete('/termekTorles', (req, res) => {
+    const {termek_id} =req.body
+    const sql=`delete from termek where termek.termek_id=?`
+    pool.query(sql,[termek_id] , (err, result) => {
+        if (err){
+          console.log(err)
+          return res.status(500).json({error:"Hiba"})
+        }
+        return res.status(200).json({message:"Sikeres törlés!"})
+    })
+})
 
 
 
