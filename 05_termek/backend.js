@@ -201,6 +201,75 @@ app.delete('/termekTorles', (req, res) => {
         return res.status(200).json({message:"Sikeres törlés!"})
     })
 })
+//tipus törlése
+app.delete('/tipusTorles', (req, res) => {
+    const {tipus_id} =req.body
+    const sql=`delete from tipus where tipus.tipus_id=?`
+    pool.query(sql,[tipus_id] , (err, result) => {
+        if (err){
+          console.log(err)
+          return res.status(500).json({error:"Hiba"})
+        }
+        return res.status(200).json({message:"Sikeres törlés!"})
+    })
+})
+//termék törlése paraméterrel
+app.delete('/termekTorlesPara/:termek_id', (req, res) => {
+    const {termek_id} =req.params
+    const sql=`delete from termek where termek.termek_id=?`
+    pool.query(sql,[termek_id] , (err, result) => {
+        if (err){
+          console.log(err)
+          return res.status(500).json({error:"Hiba"})
+        }
+        return res.status(200).json({message:"Sikeres törlés!"})
+    })
+})
+//tipus törlése
+app.delete('/tipusTorlesPara/:tipus_id', (req, res) => {
+    const {tipus_id} =req.params
+    const sql=`delete from tipus where tipus.tipus_id=?`
+    pool.query(sql,[tipus_id] , (err, result) => {
+        if (err){
+          console.log(err)
+          return res.status(500).json({error:"Hiba"})
+        }
+        return res.status(200).json({message:"Sikeres törlés!"})
+    })
+})
+//tipus módítása
+app.put('/tipusModosit/:tipus_id', (req, res) => {
+    const {tipus_id} =req.params
+    const {ujnev} =req.body
+    const sql=`update tipus set tipus.tipus_nev=? where tipus.tipus_id=?`
+    pool.query(sql,[ujnev,tipus_id] , (err, result) => {
+        if (err){
+          console.log(err)
+          return res.status(500).json({error:"Hiba"})
+        }
+        return res.status(200).json({message:"Sikeres módosítás!"})
+    })
+})
+//termék módosítása
+app.put('/termekModosit/:termek_id', (req, res) => {
+    const {termek_id} =req.params
+    const {termek_nev,termek_ar,termek_tipus} =req.body
+    const sql=`
+      update termek 
+      set termek.termek_nev=?, termek.termek_ar=?, termek.termek_tipus=?
+      where termek.termek_id=?`
+    pool.query(sql,[termek_nev,termek_ar,termek_tipus,termek_id] , (err, result) => {
+        if (err){
+          console.log(err)
+          return res.status(500).json({error:"Hiba"})
+        }
+        return res.status(200).json({message:"Sikeres módosítás!"})
+    })
+})
+
+
+
+
 
 
 
