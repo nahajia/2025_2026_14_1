@@ -19,14 +19,14 @@ function megjelenitTipus(y){
 //lenyilo lista, tipus async-el
 async function betoltTipus() {
     try{
-        let x = await fetch("http://localhost:3000/tipus");
-        let y = await x.json();
-        if (!x.ok){
-            console.log(y.error)
-            document.getElementById("lenyiloKeret").innerHTML=y.error
+        let response = await fetch("http://localhost:3000/tipus");
+        let data = await response.json();
+        if (!response.ok){
+            console.log(data.error)
+            document.getElementById("lenyiloKeret").innerHTML=data.error
         }
         else{
-            megjelenitLenyilo(y)
+            megjelenitLenyilo(data)
         }
     }
     catch(err){
@@ -36,13 +36,27 @@ async function betoltTipus() {
 
 betoltTipus()
 
-function megjelenitLenyilo(y){
-    let sz="<select>"
-    for (const elem of y) {
+function megjelenitLenyilo(data){
+    let sz="<select id='termek_tipus'>"
+    for (const elem of data) {
         sz+=`
-        <option>${elem.tipus_nev}</option>
+        <option value="${elem.tipus_id}">${elem.tipus_nev}</option>
         `
     }
     sz+="</select>"
     document.getElementById("lenyiloKeret").innerHTML=sz
+}
+
+async function termekFelvitel(){
+    //alert("Kattintas")
+    const adatok={
+        "termek_nev":document.getElementById("termek_nev").value,
+        "termek_ar":document.getElementById("termek_ar").value,
+        "termek_tipus":document.getElementById("termek_tipus").value
+    }
+    alert(adatok.termek_tipus)
+    /*
+    let response = await fetch("http://localhost:3000/");
+    let data = await response.json();
+    */
 }
