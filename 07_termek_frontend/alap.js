@@ -54,9 +54,39 @@ async function termekFelvitel(){
         "termek_ar":document.getElementById("termek_ar").value,
         "termek_tipus":document.getElementById("termek_tipus").value
     }
-    alert(adatok.termek_tipus)
-    /*
-    let response = await fetch("http://localhost:3000/");
+    //alert(adatok.termek_tipus)
+    
+    let response = await fetch("http://localhost:3000/termekFelvitel",{
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(adatok)
+          });
     let data = await response.json();
-    */
+    if (!response.ok){
+        console.log(data.error)
+    }
+    else{
+        console.log(data.message)
+    }
 }
+
+async function termekTorles(){
+    //alert("Kattintas")
+    const adatok={
+        "termek_id":document.getElementById("termek_id").value,
+   }
+   
+    let response = await fetch(`http://localhost:3000/termekTorlesPara/${adatok.termek_id}`,{
+          method: "DELETE"
+         });
+    let data = await response.json();
+    if (!response.ok){
+        console.log(data.error)
+    }
+    else{
+        console.log(data.message)
+    }
+}
+

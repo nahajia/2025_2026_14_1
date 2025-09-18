@@ -6,15 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <label for="">Termék neve:</label>
-    <input type="text" id="termek_nev">
-    <br>
-    <label for="">Termék ára:</label>
-    <input type="text" id="termek_ar">
-    <br>
-    <label for="">Termék típusa:</label>
-    <div id="lenyiloKeret"></div>
-    <button onclick="termekFelvitel()">Termék felvitele</button>
+    <div>
+        <h2>Termék felvitele</h2>
+        <label for="">Termék neve:</label>
+        <input type="text" id="termek_nev">
+        <br>
+        <label for="">Termék ára:</label>
+        <input type="text" id="termek_ar">
+        <br>
+        <label for="">Termék típusa:</label>
+        <div id="lenyiloKeret"></div>
+        <button onclick="termekFelvitel()">Termék felvitele</button>
+    </div>
+    <hr>
+    <div>
+        <h2>Termék törlése</h2>
+        <label for="">Törlendő termék id-ja:</label>
+        <input type="text" id="termek_id">
+        <br>
+        <button onclick="termekTorles()">Termék törlése</button>
+    </div>
+
+
 
     <script src="alap.js"></script>
 </body>
