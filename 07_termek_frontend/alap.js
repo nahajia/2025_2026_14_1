@@ -66,9 +66,11 @@ async function termekFelvitel(){
     let data = await response.json();
     if (!response.ok){
         console.log(data.error)
+        document.getElementById("sikerFelvitel").innerHTML=data.error
     }
     else{
         console.log(data.message)
+        document.getElementById("sikerFelvitel").innerHTML=data.message
     }
 }
 
@@ -84,9 +86,11 @@ async function termekTorles(){
     let data = await response.json();
     if (!response.ok){
         console.log(data.error)
+        document.getElementById("sikerTorles").innerHTML=data.error
     }
     else{
         console.log(data.message)
+        document.getElementById("sikerTorles").innerHTML=data.message
     }
 }
 
