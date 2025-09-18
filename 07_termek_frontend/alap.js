@@ -1,3 +1,4 @@
+/*
 fetch("http://localhost:3000/tipus")
 .then(x => x.json())
 .then(y => megjelenitTipus(y));
@@ -13,11 +14,29 @@ function megjelenitTipus(y){
     sz+="</ul>"
     document.body.innerHTML+=sz
 }
+*/
 
 //lenyilo lista, tipus async-el
 async function betoltTipus() {
-    let x = await fetch("http://localhost:3000/tipus");
-    let y = await x.json();
+    try{
+        let x = await fetch("http://localhost:3000/tipus");
+        let y = await x.json();
+        if (!x.ok){
+            console.log(y.error)
+            document.getElementById("lenyiloKeret").innerHTML=y.error
+        }
+        else{
+            megjelenitLenyilo(y)
+        }
+    }
+    catch(err){
+        console.log("Hiba",err)
+    }
+}
+
+betoltTipus()
+
+function megjelenitLenyilo(y){
     let sz="<select>"
     for (const elem of y) {
         sz+=`
@@ -25,7 +44,5 @@ async function betoltTipus() {
         `
     }
     sz+="</select>"
-    document.body.innerHTML+=sz
+    document.getElementById("lenyiloKeret").innerHTML=sz
 }
-
-betoltTipus()
