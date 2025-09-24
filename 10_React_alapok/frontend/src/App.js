@@ -2,6 +2,8 @@ import kep from "./kep.jpg"
 import baross from "./baross.webp"
 import './App.css';
 import Uzenet from "./Uzenet";
+import Keruld from "./Keruld";
+
 
 const szemely={
   "nev":"Elgá Zoltán",
@@ -52,6 +54,7 @@ function App() {
       <img src={kep} alt="Smiley" className="kepkinezet"/>
 
       <Uzenet />
+      <Keruld />
       <Konyv />
       <Utazas />
       <Nevjegy />
