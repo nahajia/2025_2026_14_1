@@ -199,6 +199,40 @@ app.put('/olvasoModosit/:olvaso_id', (req, res) => {
         return res.status(200).json({message:"Sikeres módosítás"})
         })
 })
+//konyv módosítás
+app.put('/konyvModosit/:konyv_id', (req, res) => {
+        const {konyv_id} =req.params
+        const {konyv_cim,konyv_ev}=req.body
+        const sql=`update konyv 
+                    set konyv.konyv_cim=?,konyv.konyv_ev=?
+                    where konyv.konyv_id=?
+                    `
+        pool.query(sql,[konyv_cim,konyv_ev,konyv_id], (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+
+        return res.status(200).json({message:"Sikeres módosítás"})
+        })
+})
+//patch , csak rész adat módosítás: id - param, datumbe body
+app.patch('/kolcsDatumbeModosit/:kolcsonzes_id', (req, res) => {
+        const {kolcsonzes_id} =req.params
+        const {kolcsonzes_datumbe}=req.body
+        const sql=`update kolcsonzes
+                    set kolcsonzes.kolcsonzes_datumbe=?
+                    where kolcsonzes.kolcsonzes_id=?
+                    `
+        pool.query(sql,[kolcsonzes_datumbe,kolcsonzes_id], (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+
+        return res.status(200).json({message:"Sikeres módosítás"})
+        })
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
