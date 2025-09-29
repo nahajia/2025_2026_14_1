@@ -3,6 +3,7 @@ import baross from "./baross.webp"
 import './App.css';
 import Uzenet from "./Uzenet";
 import Keruld from "./Keruld";
+import Taplalkozas from "./Taplalkozas";
 
 
 const szemely={
@@ -53,6 +54,7 @@ function App() {
       <h2>Pozitív gondolatok a boldog élethez!!!</h2>
       <img src={kep} alt="Smiley" className="kepkinezet"/>
 
+      <Taplalkozas />
       <Uzenet />
       <Keruld />
       <Konyv />

@@ -29,14 +29,35 @@
   padding-left: 80px;
   margin-top: 20px;
 }
-@media (max-width:600px){
+.taplalkozas{
+  width: 40%;
+  border: 2px solid orange;
+  box-shadow: 5px 5px 5px;
+  margin:auto;
+  text-align: left;
+  padding:10px;
+}
+#doboz{
+  text-align: center;
+}
+.arnyekolt{
+  border:1px solid cornflowerblue;
+  box-shadow: 3px 3px 3px blue;
+  width: 200px;
+  margin:auto;
+  margin-bottom: 10px;
+}
+@media (max-width:800px){
     .keretUtazas{
-      width:50%;
+      width:60%;
       padding-left: 20px;
     }
     .keretUzenet{
-      width:50%;
+      width:60%;
       padding-left: 20px;
+    }
+    .taplalkozas{
+      width: 60%;
     }
     
 }
