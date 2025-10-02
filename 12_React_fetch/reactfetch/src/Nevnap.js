@@ -3,14 +3,23 @@ import toltesKep from "./toltes.gif"
 const Nevnap=()=>{
     const [toltes,SetToltes]=useState(true)
     const [adatok,SetAdatok]=useState({})
+    const [hiba,SetHiba]=useState(false)
+    const [hibaSzoveg,SetHibaSzoveg]=useState("")
+
 
     const letoltNevnap=async ()=>{
+        try{
             let response=await fetch("https://api.nevnapok.eu/ma")
             let data=await response.json()
-            SetAdatok(data["10-02"])
+            let ma=new Date().toISOString().slice(5,10)
+            //alert(ma)
+            SetAdatok(data[ma])
             SetToltes(false)
-            //console.log(adatok)
-            //alert(JSON.stringify(adatok))
+        }
+        catch (error){
+            SetHiba(true)
+            SetHibaSzoveg(error)
+        }
            
     }
 
@@ -27,11 +36,30 @@ const Nevnap=()=>{
             </div>
         )
     }
+    if (hiba){
+        return (
+            <div>
+                <p>Hiba</p>
+                <p>{hibaSzoveg}</p>
+            </div> 
+        )       
+    }
     else{
     return (
         <div>
             <h3>Névnapok</h3>
-            <p>{adatok[0]}</p>
+            {
+                adatok.length>0 ? 
+                <div>
+                    {
+                        adatok.map((elem,index)=>(
+                            <p key={index}>{elem}</p>
+                        ))
+                    }
+                </div>
+                :
+                <div>Nincs adat</div>
+            }
         </div>
     )
     }
