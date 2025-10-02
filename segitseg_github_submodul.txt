@@ -1,0 +1,7 @@
+git submodule add https://github.com/nahajia/palyaorientacio.git 13_palyaorientacio/palyaorientacio
+git commit -m "Hozzáadva a MASODIK submodule-ként"
+git push origin main
+
+mi az aktouális origin-lekérdezése: 
+git remote get-url origin
+
