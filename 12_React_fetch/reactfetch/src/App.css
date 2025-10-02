@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+}
+
+.tarolo{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.oszlop1{
+  flex:1;
+  border: 1px solid black;
+  margin:5px;
+  padding:5px;
+}
+.oszlop2{
+  flex:2;
+  border: 1px solid black;
+  margin:5px;
+  padding:5px;
+}
+@media (max-width:576px) {
+  .oszlop1,.oszlop2{
+    flex: 100%;
+  }
+}

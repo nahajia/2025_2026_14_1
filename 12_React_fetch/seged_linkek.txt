@@ -1,0 +1,11 @@
+Euro árfolyam:
+https://api.exchangerate-api.com/v4/latest/EUR
+
+Chuck Norris:
+https://api.chucknorris.io/jokes/random
+
+Névnap:
+https://api.nevnapok.eu/ma
+
+Földrajzi szélesség,hossz:
+https://freegeoip.app/json/  
