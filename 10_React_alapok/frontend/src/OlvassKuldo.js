@@ -1,4 +1,5 @@
 import { useState } from "react"
+import OlvassFogado from "./OlvassFogado"
 const konyvTomb=[
     {
         "cim":"Harry Potter 1.",
@@ -37,9 +38,9 @@ const konyvTomb=[
     }
 ]
 
-const Olvass=()=>{
+const OlvassKuldo=()=>{
     const [kivalIndex,setkivalIndex]=useState(0)
-    
+   
     return (
         <div className="konyvDoboz">
             <h2>Olvass!!!</h2>
@@ -54,16 +55,20 @@ const Olvass=()=>{
                 </select>
                 </div>
                 <div className="oszlop"> 
-                <p style={{fontWeight:"bold"}}>A könyv részletes adatai:</p>
-                <p>Könyv címe: {konyvTomb[kivalIndex].cim}</p>
-                <p>Könyv írója: {konyvTomb[kivalIndex].iro}</p>
-                <p>Könyv műfaja: {konyvTomb[kivalIndex].mufaj}</p>
-                <p>Könyv hossza: {konyvTomb[kivalIndex].hossz}</p>
-                <p>Könyv ára: {konyvTomb[kivalIndex].ar}</p>
+                    <OlvassFogado 
+                        kCim={konyvTomb[kivalIndex].cim} 
+                        kIro={konyvTomb[kivalIndex].iro} 
+                        kMufaj={konyvTomb[kivalIndex].mufaj} 
+                        kHossz={konyvTomb[kivalIndex].hossz} 
+                        kIAr={konyvTomb[kivalIndex].ar} 
+
+                    />
+
                 </div>
             </div>
         </div>
     )
 }
-export default Olvass
+export default OlvassKuldo
+
 

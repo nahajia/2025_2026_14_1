@@ -1,3 +1,29 @@
+.sportKeret{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sportDoboz{
+  background-color: bisque;
+  flex: 40%;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 10px;
+}
+
+
+
+.ketOszlop{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.oszlop{
+  flex:40%;
+  box-sizing: border-box;
+  margin:20px;
+}
+
 .konyvDoboz{
   border:1px solid purple;
   width:50%;

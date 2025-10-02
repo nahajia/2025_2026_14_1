@@ -6,7 +6,9 @@ import Keruld from "./Keruld";
 import Taplalkozas from "./Taplalkozas";
 import Hala from "./Hala";
 import Stresszoldas from "./Stresszoldas";
-import Olvass from "./Olvass";
+//import Olvass from "./Olvass";
+import OlvassKuldo from "./OlvassKuldo";
+import SportKuldo from "./SportKuldo";
 
 
 const szemely={
@@ -57,7 +59,8 @@ function App() {
       <h2>Pozitív gondolatok a boldog élethez!!!</h2>
       <img src={kep} alt="Smiley" className="kepkinezet"/>
 
-      <Olvass />
+      <SportKuldo />
+      <OlvassKuldo />
       <Stresszoldas />
       <Hala />
       <Taplalkozas />
