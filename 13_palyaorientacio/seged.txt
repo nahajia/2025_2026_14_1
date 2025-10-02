@@ -1,0 +1,143 @@
+Ha pályaválasztás előtt állsz, érdemes
+tisztázni, hogy milyen képességekkel rendelkezel. A képességek erősen befolyásolják, hogy
+pályádon, egy foglalkozás gyakorlásánál mennyire leszel sikeres. Az alábbi kérdőív ebben jelenthet
+segítséget: kitöltésével tájékozódhatsz a képességeidről, melyek jelentik az erősségeidet és melyek
+azok, amelyekben gyengébb vagy.
+
+
+
+  const tomb=[
+  { "sorszam": 1, "kijelentes": "Kéziszerszámok használata.", "tipus": "kezugyesseg" },
+  { "sorszam": 2, "kijelentes": "A visszajáró pénz gyors kiszámolása.", "tipus": "matematikai" },
+  { "sorszam": 3, "kijelentes": "A munkavégzés során felmerülő problémák önálló megoldása.", "tipus": "problemamegoldo" },
+  { "sorszam": 4, "kijelentes": "A konfliktusok ellenére együtt dolgozni valakivel.", "tipus": "egyuttmukodo" },
+  { "sorszam": 5, "kijelentes": "Ügyfeleket tájékoztatni.", "tipus": "kommunikacios" },
+  { "sorszam": 6, "kijelentes": "Egész nap kétkezi munkát végezni.", "tipus": "kezugyesseg" },
+  { "sorszam": 7, "kijelentes": "Adatsorok összeadása fejben.", "tipus": "matematikai" },
+  { "sorszam": 8, "kijelentes": "Rájönni egy összetett feladat legegyszerűbb megoldására.", "tipus": "problemamegoldo" },
+  { "sorszam": 9, "kijelentes": "Közösségi tevékenységben való aktív részvétel.", "tipus": "egyuttmukodo" },
+  { "sorszam": 10, "kijelentes": "Bonyolult gondolatok elmagyarázása szóban.", "tipus": "kommunikacios" },
+  { "sorszam": 11, "kijelentes": "Cérna befűzése tűbe.", "tipus": "kezugyesseg" },
+  { "sorszam": 12, "kijelentes": "Családi költségvetés - bevételek, kiadások - tervezése.", "tipus": "matematikai" },
+  { "sorszam": 13, "kijelentes": "Logikai fejtörők megoldása.", "tipus": "problemamegoldo" },
+  { "sorszam": 14, "kijelentes": "Csoportban való munkavégzés/ együttműködés a feladatok megoldásában.", "tipus": "egyuttmukodo" },
+  { "sorszam": 15, "kijelentes": "Hallott szöveg gyors felfogása.", "tipus": "kommunikacios" },
+  { "sorszam": 16, "kijelentes": "Célba dobni.", "tipus": "kezugyesseg" },
+  { "sorszam": 17, "kijelentes": "Adatokkal, számokkal való munkavégzés.", "tipus": "matematikai" },
+  { "sorszam": 18, "kijelentes": "Különböző megoldások kigondolása egy feladathoz.", "tipus": "problemamegoldo" },
+  { "sorszam": 19, "kijelentes": "A közös hang megtalálása munkatársaimmal.", "tipus": "egyuttmukodo" },
+  { "sorszam": 20, "kijelentes": "Népes hallgatóság előtt beszélni.", "tipus": "kommunikacios" },
+  { "sorszam": 21, "kijelentes": "Csipesszel apró tárgyak megfogása.", "tipus": "kezugyesseg" },
+  { "sorszam": 22, "kijelentes": "Utazás várható időtartamának kiszámítása.", "tipus": "matematikai" },
+  { "sorszam": 23, "kijelentes": "Problémák lényegének gyors felismerése.", "tipus": "problemamegoldo" },
+  { "sorszam": 24, "kijelentes": "Konszenzus/egyetértés kialakítása kollégáimmal.", "tipus": "egyuttmukodo" },
+  { "sorszam": 25, "kijelentes": "Gondolataimat írásban kifejteni.", "tipus": "kommunikacios" },
+  { "sorszam": 26, "kijelentes": "Tárgyak elemeinek összecsavarozása.", "tipus": "kezugyesseg" },
+  { "sorszam": 27, "kijelentes": "Matematikai feladványok kiszámítása.", "tipus": "matematikai" },
+  { "sorszam": 28, "kijelentes": "Ugyanannak a problémának több szempont szerinti megközelítése.", "tipus": "problemamegoldo" },
+  { "sorszam": 29, "kijelentes": "Jó munkahelyi légkör kialakítása.", "tipus": "egyuttmukodo" },
+  { "sorszam": 30, "kijelentes": "Mondatok tiszta, érthető kiejtése.", "tipus": "kommunikacios" }
+  ]
+
+
+
+
+  [
+//kézügyesség
+        {
+            "sorszam":1,
+            "tipus":"kézügyesség",
+            "ertek":"átlag alatti",
+            "jellemzo":"Kézügyessége az átlagosnál gyengébb, a kéz és ujjmozdulatokat kivitelezésében kevésbé gyors és pontos. Az apró tárgyakkal végzendő munka kevésbé megfelelő az Ön számára."
+        },
+        {
+            "sorszam":2,
+            "tipus":"kézügyesség",
+            "ertek":"átlagos",
+            "jellemzo":"A kezek használatát igénylő munkavégzés általában nem okoz gondot, de a különösen precíz kéz - és ujjmozdulatok kivitelezésében nehézségei lehetnek."
+        },
+        {
+            "sorszam":3,
+            "tipus":"kézügyesség",
+            "ertek":"átlag feletti",
+            "jellemzo":"Az átlagosnál jobb a kézügyessége. Nem okoz számára nehézséget, ha a kezeinek, ujjainak használatával kell munkát végeznie, képes a gyors- és pontos kéz- és ujjmozdulatok kivitelezésére."
+        },
+//matematikai
+        {
+            "sorszam":4,
+            "tipus":"matematikai",
+            "ertek":"átlag alatti",
+            "jellemzo":"Matematikai képessége az átlagosnál gyengébb. A számtani műveletekkel, matematikai problémák megoldásának képességét igénylő munkára kevésbé alkalmas."
+        },
+        {
+            "sorszam":5,
+            "tipus":"matematikai",
+            "ertek":"átlagos",
+            "jellemzo":"Matematikai képessége átlagos szintű. Általában elboldogul a számtani műveletek elvégzését igénylő feladatokkal, de a nehezebb matematikai problémák megoldása már gondot jelenthet."
+        },
+        {
+            "sorszam":6,
+            "tipus":"matematikai",
+            "ertek":"átlag feletti",
+            "jellemzo":"Matematikai képessége az átlagosnál magasabb szintű. A számtani műveletekben való jártasságot, vagy a matematikai problémák megoldását igénylő feladatokat jól el tudja látni."
+        },
+//problémamegoldó
+        {
+            "sorszam":7,
+            "tipus":"problémamegoldó",
+            "ertek":"átlag alatti",
+            "jellemzo":"Problémamegoldó képessége az átlagosnál gyengébb. A szellemi erőfeszítést, gondolkodást igénylő foglalkozások kevésbé kedvezőek számára."
+        },
+        {
+            "sorszam":8,
+            "tipus":"problémamegoldó",
+            "ertek":"átlagos",
+            "jellemzo":"Problémamegoldó képessége átlagos. Az átlagos szintű szellemi erőfeszítést igénylő feladatokat általában el tudja végezni, de a különösen nehéz, összetett problémák megértésében és megoldásában kevésbé hatékony."
+        },
+        {
+            "sorszam":9,
+            "tipus":"problémamegoldó",
+            "ertek":"átlag feletti",
+            "jellemzo":"Problémamegoldó képessége magas szintű. A szellemi erőfeszítést, gondolkodást igénylő feladatokat jól átlátja, megoldásukban hatékony."
+        },
+//együttműködő
+        {
+            "sorszam":10,
+            "tipus":"együttműködő",
+            "ertek":"átlag alatti",
+            "jellemzo":"Együttműködő képessége az átlagosnál gyengébb. A feladatok megosztásán, a társakkal való együttműködésen alapuló munka kevésbé megfelelő számára. Az önálló tevékenység előnyösebb számára."
+        },
+        {
+            "sorszam":11,
+            "tipus":"együttműködő",
+            "ertek":"átlagos",
+            "jellemzo":"Együttműködő képessége átlagos. Általában nem okoz problémát, ha másokkal közösen kell dolgoznia, de a társakkal való tökéletes összhangot, együttműködést igénylő tevékenység kevésbé megfelelő számára."
+        },
+        {
+            "sorszam":12,
+            "tipus":"együttműködő",
+            "ertek":"átlag feletti",
+            "jellemzo":"Együttműködő képessége az átlagosnál magasabb szintű. Képes a cél érdekében a másik emberrel való harmonikus együttműködésre. Kedvezőek számára a társakkal való közös tevékenységen, a feladatok megosztásán alapuló munkák."
+        },
+//kommunikációs
+        {
+            "sorszam":13,
+            "tipus":"kommunikációs",
+            "ertek":"átlag alatti",
+            "jellemzo":"Kommunikációs képessége az átlagosnál gyengébb. Kevésbé jól fejezi ki magát, kedvezőtlenek a számára az olyan munkák, amelyek a másokkal való szóbeli, vagy írásbeli kommunikációt, esetleg az emberek csoportja előtti beszédet igénylik."
+        },
+        {
+            "sorszam":14,
+            "tipus":"kommunikációs",
+            "ertek":"átlagos",
+            "jellemzo":"Kommunikációs képessége átlagos szintű. Nem okoz gondot számára általában a szóbeli, vagy írásbeli megnyilatkozás. A kommunikáción alapuló, nagyfokú kifejezőképességet igénylő foglalkozások kevésbé megfelelőek számára."
+        },
+        {
+            "sorszam":15,
+            "tipus":"kommunikációs",
+            "ertek":"átlag feletti",
+            "jellemzo":"Kommunikációs képessége az átlagosnál magasabb szintű. Gondolatait képes árnyaltan megfogalmazni, jó szókinccsel rendelkezik. Nem jelent nehézséget, ha emberek előtt kell beszélnie."
+        },
+    ]
+
+
