@@ -1,5 +1,6 @@
 import './App.css';
 import Euro from './Euro';
+import Chuck from './Chuck';
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
           </div>
           <div className='oszlop2'>
               <h2>Közép</h2>
-          </div>
+         </div>
           <div className='oszlop1'>
               <h2>Jobb</h2>
+              <Chuck />
           </div>
            
       </div>
