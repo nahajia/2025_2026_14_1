@@ -1,5 +1,5 @@
 
-const SportFogado=({nemSzeret,vissza,be})=>{
+const SportFogado=({nemSzeret,be,vissza,vissza2})=>{
     return (
         <div>
             <p>Sportok amiket nem szeretek:</p>
@@ -10,6 +10,10 @@ const SportFogado=({nemSzeret,vissza,be})=>{
                 <li>{be}</li>
             </ul>
             <button onClick={()=>vissza("séta")}>Visszaküldés</button>
+            <br />
+            <p>Írd be a szót, amit átküldesz bal oldalra:</p>
+            <input type="text" onChange={(e)=>vissza2(e.target.value)} />
+
         </div>
     )
 }

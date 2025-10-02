@@ -2,6 +2,7 @@ import { useState } from "react"
 import SportFogado from "./SportFogado"
 const SportKuldo=()=>{
     const [szeret,setSzeret]=useState("")
+    const [szeret2,setSzeret2]=useState("")
     const [be,setBe]=useState("")
     return (
         <div>
@@ -13,6 +14,7 @@ const SportKuldo=()=>{
                         <li>távolbanézés</li>
                         <li>ping-pong</li>
                         <li>{szeret}</li>
+                        <li>{szeret2}</li>
                     </ul>
 
                     <p>Írd be a szót, amit átküldesz jobb oldalra:</p>
@@ -22,9 +24,10 @@ const SportKuldo=()=>{
 
                     <SportFogado 
                         nemSzeret="bungee jumping" 
-                        vissza={setSzeret}
-                        
                         be={be}
+
+                        vissza={setSzeret}
+                        vissza2={setSzeret2}
                         />
                 </div>
             </div>
