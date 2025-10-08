@@ -1,8 +1,10 @@
 const express = require('express')
 const mysql = require('mysql')
+const cors = require('cors')
 const app = express()
 const port = 3000
 
+app.use(cors())
 app.use(express.json())
 
 const pool = mysql.createPool({
@@ -155,6 +157,20 @@ app.post('/napKonyvKeres', (req, res) => {
         return res.status(200).json(result)
         })
 })
+//konyv felvitele
+app.post('/konyvFelvitel', (req, res) => {
+        const {konyv_cim,konyv_ev} =req.body
+        const sql=`insert into konyv values (null,?,?)`
+        pool.query(sql,[konyv_cim,konyv_ev], (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        
+        return res.status(200).json({message:"Sikeres felvitel"})
+        })
+})
+
 //konyv törlése id alapján
 app.delete('/konyvTorles/:konyv_id', (req, res) => {
         const {konyv_id} =req.params
