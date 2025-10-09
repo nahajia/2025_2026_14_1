@@ -1,0 +1,21 @@
+
+A varosok adatb-vel dolgozz!
+
+végpontok:
+
+1. megyék lekérdezése
+2. varosok lekérdezése
+3. lekérdezés: megyénként hány város van (megye név és darabszám)
+4. keresés: bemenetként megadott számnál nagyobb népességű városokat keres 
+(város neve, népesség, megye neve)
+5. új megye felvitele
+6. új város felvitele
+7. megye törlése id alapján
+8. város törlése id alapján
+9. megye módosítása id alapján
+10. város módosítása id alapján, csak a város terület és népesség módosítása
+11. keresés: bemenetként megadott szót keres város nevében 
+(város neve, megye neve, várostípus neve)
+12. város összes adatának módosítása id alapján
+  
+Postmanben mindegyiket teszteld, képernyőképet készíts róla!
