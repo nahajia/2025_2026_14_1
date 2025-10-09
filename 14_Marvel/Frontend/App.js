@@ -14,7 +14,7 @@ const App = () => {
       setAdatok(data)
     }
     catch (error){
-      Alert.alert("Hiba")
+      alert("Hiba")
     }
 
   }
@@ -38,12 +38,12 @@ const App = () => {
                   })
         const data=await response.json()
         if (response.ok)
-            Alert.alert(data["message"])
+            alert(data["message"])
         else 
-          Alert.alert(data["error"])
+          alert(data["error"])
       }
       catch (error){
-        Alert.alert("Hiba")
+          alert("Hiba")
       }
   }
 
@@ -70,6 +70,10 @@ const App = () => {
                   </View>)
             }
             keyExtractor={item => item.film_id}
+            style={{
+                    height: '100vh',        // vagy pl. 500
+                    overflowY: 'auto',      // fontos weben
+                  }}
           />
        {/*
           {adatok.map((elem,index)=>(
