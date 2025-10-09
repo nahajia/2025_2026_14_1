@@ -7,16 +7,45 @@ const App = () => {
 
   const leTolt=async()=>{
     //alert("Hello")
+    try{
       const response=await fetch(Cim.Cim+"film")
       const data=await response.json()
       //alert(JSON.stringify(data))
       setAdatok(data)
+    }
+    catch (error){
+      Alert.alert("Hiba")
+    }
 
   }
 
   useEffect(()=>{
       leTolt()
   },[])
+
+  const szavazas=async (id)=>{
+    try{
+        //alert("kattintva")
+        let bemenet={
+          "szavazat_film":id
+        }
+        const response=await fetch(Cim.Cim+"szavazatFelvitel",{
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json"
+                  },
+                  body: JSON.stringify(bemenet)
+                  })
+        const data=await response.json()
+        if (response.ok)
+            Alert.alert(data["message"])
+        else 
+          Alert.alert(data["error"])
+      }
+      catch (error){
+        Alert.alert("Hiba")
+      }
+  }
 
   return (
     <View style={styles.sajat}>
@@ -32,8 +61,11 @@ const App = () => {
                       source={{uri: Cim.Cim+item.film_kep }} 
                       style={{width:250,height:250}}
                       />
-                    <TouchableOpacity>
-                      <Text>Erre szavazok...</Text>
+                    <TouchableOpacity 
+                          style={styles.gomb} 
+                          onPress={()=>szavazas(item.film_id)}
+                          >
+                      <Text style={styles.gombFelirat}>Erre szavazok...</Text>
                     </TouchableOpacity>
                   </View>)
             }
@@ -71,6 +103,16 @@ const styles = StyleSheet.create({
     fontSize:20,
     marginTop:20,
     fontWeight:"bold"
+  },
+  gomb:{
+    backgroundColor:"#0000ff",
+    padding:10,
+    marginTop:5,
+    borderRadius:10
+  },
+  gombFelirat:{
+    color:"white",
+    fontSize:20
   }
 });
 
