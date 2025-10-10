@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2019. Ápr 24. 10:06
--- Kiszolgáló verziója: 10.1.19-MariaDB
--- PHP verzió: 5.6.28
+-- Létrehozás ideje: 2025. Okt 09. 10:41
+-- Kiszolgáló verziója: 10.4.28-MariaDB
+-- PHP verzió: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,8 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `varosok`
 --
-CREATE DATABASE IF NOT EXISTS `varosok` DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
-USE `varosok`;
+CREATE DATABASE IF NOT EXISTS `varosok_AutoI` DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
+USE `varosok_AutoI`;
 
 -- --------------------------------------------------------
 
@@ -30,7 +31,7 @@ USE `varosok`;
 
 CREATE TABLE `megye` (
   `id` int(11) NOT NULL,
-  `mnev` varchar(40) COLLATE utf8_hungarian_ci NOT NULL
+  `mnev` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
@@ -68,11 +69,11 @@ INSERT INTO `megye` (`id`, `mnev`) VALUES
 
 CREATE TABLE `varos` (
   `id` int(11) NOT NULL,
-  `vnev` varchar(40) COLLATE utf8_hungarian_ci NOT NULL,
+  `vnev` varchar(40) NOT NULL,
   `vtipid` int(11) NOT NULL,
   `megyeid` int(11) NOT NULL,
-  `jaras` varchar(20) COLLATE utf8_hungarian_ci DEFAULT NULL,
-  `kisterseg` varchar(20) COLLATE utf8_hungarian_ci DEFAULT NULL,
+  `jaras` varchar(20) DEFAULT NULL,
+  `kisterseg` varchar(20) DEFAULT NULL,
   `nepesseg` int(11) DEFAULT NULL,
   `terulet` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
@@ -437,7 +438,7 @@ INSERT INTO `varos` (`id`, `vnev`, `vtipid`, `megyeid`, `jaras`, `kisterseg`, `n
 
 CREATE TABLE `varostipus` (
   `id` int(11) NOT NULL,
-  `vtip` varchar(40) COLLATE utf8_hungarian_ci NOT NULL
+  `vtip` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
@@ -476,15 +477,27 @@ ALTER TABLE `varostipus`
   ADD PRIMARY KEY (`id`);
 
 --
--- Megkötések a kiírt táblákhoz
+-- A kiírt táblák AUTO_INCREMENT értéke
 --
 
 --
--- Megkötések a táblához `varos`
+-- AUTO_INCREMENT a táblához `megye`
+--
+ALTER TABLE `megye`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT a táblához `varos`
 --
 ALTER TABLE `varos`
-  ADD CONSTRAINT `FK_varos_megye` FOREIGN KEY (`megyeid`) REFERENCES `megye` (`id`),
-  ADD CONSTRAINT `FK_varos_varostipus` FOREIGN KEY (`vtipid`) REFERENCES `varostipus` (`id`);
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=347;
+
+--
+-- AUTO_INCREMENT a táblához `varostipus`
+--
+ALTER TABLE `varostipus`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

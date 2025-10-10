@@ -1,9 +1,10 @@
 import {useState,useEffect} from 'react';
-import {Alert, Button, StyleSheet, View,Text, Image, FlatList,TouchableOpacity} from 'react-native';
+import {Alert, Button, StyleSheet, View,Text, Image, FlatList,TouchableOpacity,ActivityIndicator} from 'react-native';
 import Cim from './Cim';
 
 const App = () => {
   const [adatok,setAdatok]=useState([])
+  const [betoltes,setBetoltes]=useState(true)
 
   const leTolt=async()=>{
     //alert("Hello")
@@ -15,6 +16,9 @@ const App = () => {
     }
     catch (error){
       alert("Hiba")
+    }
+    finally{
+      setBetoltes(false)
     }
 
   }
@@ -52,29 +56,36 @@ const App = () => {
         <View>
           <Text style={styles.cim}>Marvel filmek</Text>
       
-          <FlatList
-            data={adatok}
-            renderItem={({item}) => 
-                  (<View>
-                    <Text style={styles.alcim}>{item.film_cim}</Text>
-                    <Image 
-                      source={{uri: Cim.Cim+item.film_kep }} 
-                      style={{width:250,height:250}}
-                      />
-                    <TouchableOpacity 
-                          style={styles.gomb} 
-                          onPress={()=>szavazas(item.film_id)}
-                          >
-                      <Text style={styles.gombFelirat}>Erre szavazok...</Text>
-                    </TouchableOpacity>
-                  </View>)
-            }
-            keyExtractor={item => item.film_id}
-            style={{
-                    height: '100vh',        // vagy pl. 500
-                    overflowY: 'auto',      // fontos weben
-                  }}
-          />
+          {  betoltes  ? 
+              <View>
+                <ActivityIndicator />
+                <Text>Adatok betöltése...</Text>
+              </View>
+             :     
+                <FlatList
+                  data={adatok}
+                  renderItem={({item}) => 
+                        (<View>
+                          <Text style={styles.alcim}>{item.film_cim}</Text>
+                          <Image 
+                            source={{uri: Cim.Cim+item.film_kep }} 
+                            style={{width:250,height:250}}
+                            />
+                          <TouchableOpacity 
+                                style={styles.gomb} 
+                                onPress={()=>szavazas(item.film_id)}
+                                >
+                            <Text style={styles.gombFelirat}>Erre szavazok...</Text>
+                          </TouchableOpacity>
+                        </View>)
+                  }
+                  keyExtractor={item => item.film_id}
+                  style={{
+                          height: '100vh',        // vagy pl. 500
+                          overflowY: 'auto',      // fontos weben
+                        }}
+                />
+                }
        {/*
           {adatok.map((elem,index)=>(
             <View>

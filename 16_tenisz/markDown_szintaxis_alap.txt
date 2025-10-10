@@ -1,0 +1,31 @@
+1. Címsorok
+
+# jelekkel adod meg a címsor szintjét (1–6).
+# H1 címsor
+## H2 címsor
+### H3 címsor
+2. Szövegformázás
+**félkövér**
+*dőlt*
+~~áthúzott~~
+`inline kód`
+3. Kódblokkok
+```javascript
+console.log("Hello Markdown");
+```
+4. Listák
+Rendezetlen lista:
+- elem
+- másik elem
+  - al-lista
+Rendezett lista:
+1. Első
+2. Második
+3. Harmadik
+5. Linkek és képek
+[OpenAI](https://openai.com)
+
+![Kép leírása](https://example.com/kep.png)
+![Alternatív szöveg](kepem.png)
+7. Elválasztó vonal
+---
