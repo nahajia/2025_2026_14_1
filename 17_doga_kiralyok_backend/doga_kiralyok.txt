@@ -1,0 +1,18 @@
+Képernyőképet készíts Postmanben, pl. 01.png....10.png
+
+1. Uralkodók és házuk lekérdezése
+2. Azoknak az uralkodóknak a neve, akik többször voltak hatalmon
+pl. Péter
+3. Azoknak a királyoknak a lekérdezése 
+akik bemenetként megadott házból valók (szórészlet)
+pl. bemenet: Árpád kimenet: Árpád házi királyok pl.I. István, Péter 
+4. Azoknak a királyoknak az adatai, akik 
+bemenetként megadott évben uralkodtak
+pl. bemenet: 1010 kimenet: I. István- Szent István
+5. Új király felvitele
+6. A király uralkodásának felvitele, mikor volt király
+7. Egy uralkodó adatainak módosítása id alapján, neve... stb.-összes
+8. Egy király hivatali idejének módosítása id alapján, 
+csak mettől, meddig, koronzás éve
+9. Egy uralkodó hivatalának törlése id alapján
+10. Egy uralkodó törlése id alapján
