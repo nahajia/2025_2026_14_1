@@ -16,7 +16,7 @@ function App() {
           {/*
           Kivalasztva: {kivalasztott}
           */}
-          <Urlap />
+          <Urlap atkuld={kivalasztott} />
       </div>
       <BejegyzesLista />
     </div>

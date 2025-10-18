@@ -1,11 +1,47 @@
 import { useState } from "react"
-const Urlap=()=>{
+import Cim from "./Cim"
+const Urlap=({atkuld})=>{
     const [beSzoveg,setBeSzoveg]=useState("")
     const [beNev,setBeNev]=useState("")
-    const [beDatum,setBeDatum]=useState("2025-10-16")  
+    const [beDatum,setBeDatum]=useState(new Date().toISOString().split("T")[0])  
+    const [siker,setSiker]=useState(" ")
+    const [helyes,setHelyes]=useState(true)
     
-    const felvitel=()=>{
-        alert("meg lett nyomva")
+    const felvitel=async ()=>{
+        //alert("meg lett nyomva")
+        //alert(atkuld)
+        if (beSzoveg==="" || beNev===""){
+            setSiker("A bejegyzés szövegét és a becenevet kötelező megadni!!!")
+            setHelyes(false)
+            return
+        }
+        const bemenet={
+            "bejegyzes_szoveg":beSzoveg,
+            "bejegyzes_datum":beDatum,
+            "bejegyzes_ki":beNev,
+            "bejegyzes_jatekos":atkuld
+        }
+        try{
+        const response=await fetch(Cim.Cim+"bejegyzesFelvitel",{
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(bemenet)
+            })
+        const data=await response.json()
+        //alert(JSON.stringify(data))
+        if (response.ok){
+            setSiker(data["message"])
+            setHelyes(true)
+            }
+        else
+            setSiker(data["error"])
+        }
+        catch (error){
+            console.log(error)
+
+        }
     }
 
     return(
@@ -18,6 +54,7 @@ const Urlap=()=>{
             <br />
             <input 
                 type="date" 
+                value={beDatum}
                 onChange={(e)=>setBeDatum(e.target.value)}
                 />
             <br />
@@ -28,7 +65,11 @@ const Urlap=()=>{
             />
             <br />
             <button className="zoldGomb" onClick={felvitel}>Új bejegyzés felvitele</button>
-
+            {helyes ? 
+                <div style={{color:"green"}}>{siker} &nbsp;</div> 
+                :  
+                <div style={{color:"red"}}>{siker} &nbsp;</div> }
+            
             {/*
             A szöveg: {beSzoveg}
             A nev: {beNev}
