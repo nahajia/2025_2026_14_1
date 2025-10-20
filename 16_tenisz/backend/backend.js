@@ -58,6 +58,9 @@ app.get('/bejegyzesCsokk', (req, res) => {
         return res.status(200).json(result)
         })
 })
+//két plusz rendezés: játékos neve szerint növ, csökk
+
+
 //***********************lekérdezi a játékos nevét
 app.get('/jatekos', (req, res) => {
         const sql=`
