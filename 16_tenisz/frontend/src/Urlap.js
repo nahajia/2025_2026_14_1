@@ -1,9 +1,9 @@
 import { useState } from "react"
 import Cim from "./Cim"
-const Urlap=({atkuld})=>{
+const Urlap=({atkuld,frissit})=>{
     const [beSzoveg,setBeSzoveg]=useState("")
     const [beNev,setBeNev]=useState("")
-    const [beDatum,setBeDatum]=useState(new Date().toISOString().split("T")[0])  
+    const [beDatum,setBeDatum]=useState(new Date().toLocaleDateString('en-CA').split("T")[0])  
     const [siker,setSiker]=useState(" ")
     const [helyes,setHelyes]=useState(true)
     
@@ -34,6 +34,7 @@ const Urlap=({atkuld})=>{
         if (response.ok){
             setSiker(data["message"])
             setHelyes(true)
+            frissit(ertek=>!ertek)
             }
         else
             setSiker(data["error"])

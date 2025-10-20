@@ -7,6 +7,7 @@ import Urlap from './Urlap';
 
 function App() {
   const [kivalasztott,setKivalasztott]=useState(1)
+  const [frissit,setFrissit]=useState(false)
   return (
     <div >
       <h1>Tenisz hírek</h1>
@@ -16,9 +17,9 @@ function App() {
           {/*
           Kivalasztva: {kivalasztott}
           */}
-          <Urlap atkuld={kivalasztott} />
+          <Urlap atkuld={kivalasztott} frissit={setFrissit} />
       </div>
-      <BejegyzesLista />
+      <BejegyzesLista frissit={frissit}/>
     </div>
   );
 }

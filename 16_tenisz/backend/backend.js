@@ -24,6 +24,27 @@ app.get('/bejegyzes', (req, res) => {
                 from bejegyzes
                 inner join jatekos
                 on bejegyzes_jatekos=jatekos_id
+                order by bejegyzes_id 
+                `
+        pool.query(sql, (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
+
+        return res.status(200).json(result)
+        })
+})
+app.get('/bejegyzesCsokk', (req, res) => {
+        const sql=`
+                SELECT * 
+                from bejegyzes
+                inner join jatekos
+                on bejegyzes_jatekos=jatekos_id
+                order by bejegyzes_id desc
                 `
         pool.query(sql, (err, result) => {
         if (err) {

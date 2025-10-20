@@ -1,1 +1,5 @@
+React:
 npx create-react-app frontend
+
+React Native: 
+npx create-expo-app frontend --template blank
