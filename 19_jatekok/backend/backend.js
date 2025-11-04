@@ -6,6 +6,8 @@ const port = 3000
 
 app.use(cors())
 app.use(express.json())
+app.use("/kepek",express.static("kepek"))
+app.use("/kepek2",express.static("kepek2"))
 
 const pool = mysql.createPool({
         host: 'localhost',
@@ -32,6 +34,25 @@ app.get('/tipus', (req, res) => {
         return res.status(200).json(result)
         })
 })
+app.get('/jatek', (req, res) => {
+        const sql=`
+                select *
+                from jatek
+                inner join tipus
+                on jatek_tipus=tipus_id`
+        pool.query(sql, (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
+
+        return res.status(200).json(result)
+        })
+})
+
 app.post('/jatekKeresTip', (req, res) => {
         const {tipus_id} =req.body
         const sql=`

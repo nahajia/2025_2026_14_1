@@ -2,6 +2,7 @@
 
 import { useState,useEffect } from "react"
 import Cim from "../Cim"
+import "../App.css"
 
 const JatekTipusSzerint=({kivalasztott})=>{
     const [adatok,setAdatok]=useState([])
@@ -58,9 +59,19 @@ const JatekTipusSzerint=({kivalasztott})=>{
     
     else return (
         <div>
-                {kivalasztott}
+                {/*kivalasztott*/}
                 {adatok.map((elem,index)=>(
-                    <div key={index} > {elem.jatek_nev} </div>
+                    <div key={index} className="doboz"> 
+                        <div className="jatekCim">{elem.jatek_nev} </div>
+                        <div style={{textAlign:"center",marginTop:"20px"}}>
+                            <img style={{width:"200px"}} src={`${Cim.Cim}/kepek/${elem.jatek_id}.jpg`} alt={elem.jatek_nev} />
+                        </div>
+                        <div>Értékelés: {elem.jatek_ertekeles} </div>
+                        <div>Ár: {elem.jatek_ar} </div>
+                        <div>Játék leírása: {elem.jatek_leiras} </div>
+                        <div className="jatekTipus">Játék típusa: {elem.tipus_nev} </div>
+
+                    </div>
                 ))}
            
         </div>

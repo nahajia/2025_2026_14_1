@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import Navbar from './Navbar';
 import Jatekok from './Jatekok/Jatekok';
+import JatekTorles from './JatekTorles/JatekTorles';
 
 
 // App komponens
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Jatekok />} />
          
           <Route path="/jatekok" element={<Jatekok />} />
+          <Route path="/jatekTorles" element={<JatekTorles />} />
         </Routes>
       </div>
     </Router>

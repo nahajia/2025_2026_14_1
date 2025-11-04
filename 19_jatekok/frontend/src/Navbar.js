@@ -21,6 +21,10 @@ const Navbar = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/jatekok">Játékok</Link>
             </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/jatekTorles">Játékok törlése</Link>
+            </li>
             
           </ul>
         </div>
