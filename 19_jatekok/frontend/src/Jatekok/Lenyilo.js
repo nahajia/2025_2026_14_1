@@ -1,6 +1,6 @@
 
 import { useState,useEffect } from "react"
-import Cim from "./Cim"
+import Cim from "../Cim"
 
 const Lenyilo=({kivalasztott})=>{
     const [adatok,setAdatok]=useState([])
