@@ -26,6 +26,26 @@ const Navbar = () => {
               <Link className="nav-link" to="/jatekTorles">Játékok törlése</Link>
             </li>
             
+            <li className="nav-item dropdown">
+              <button 
+                className="nav-link dropdown-toggle btn btn-link"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                type="button"
+              >
+                Keresés
+              </button>
+
+              <ul className="dropdown-menu">
+                <li>
+                  <Link className="dropdown-item" to="/keresNev">Keresés név szerint</Link>
+                </li>
+                <li>
+                  <Link className="dropdown-item" to="/keresErtek">Keresés értékelés szerint</Link>
+                </li>
+              </ul>
+    </li>
+            
           </ul>
         </div>
       </div>

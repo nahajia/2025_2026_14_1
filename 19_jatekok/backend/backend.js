@@ -74,6 +74,50 @@ app.post('/jatekKeresTip', (req, res) => {
         return res.status(200).json(result)
         })
 })
+
+app.post('/jatekKeresNev', (req, res) => {
+        const {szoveg} =req.body
+        const sql=`
+                select *
+                from jatek
+                inner join tipus
+                on jatek_tipus=tipus_id
+                where jatek_nev like ?
+                `
+        pool.query(sql,[`%${szoveg}%`], (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
+
+        return res.status(200).json(result)
+        })
+})
+
+app.post('/jatekKeresErtek', (req, res) => {
+        const {ertek} =req.body
+        const sql=`
+                select *
+                from jatek
+                inner join tipus
+                on jatek_tipus=tipus_id
+                where jatek_ertekeles >= ?
+                `
+        pool.query(sql,[ertek], (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
+
+        return res.status(200).json(result)
+        })
+})
 app.delete('/jatekTorles/:jatek_id', (req, res) => {
         const {jatek_id} =req.params
         const sql=`delete from jatek where jatek_id=?`

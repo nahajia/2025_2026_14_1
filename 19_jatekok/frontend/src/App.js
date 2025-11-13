@@ -6,6 +6,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import Navbar from './Navbar';
 import Jatekok from './Jatekok/Jatekok';
 import JatekTorles from './JatekTorles/JatekTorles';
+import KeresNev from './JatekKereses/KeresNev';
+import KeresErtekeles from './JatekKereses/KeresesErtekeles';
 
 
 // App komponens
@@ -19,6 +21,8 @@ function App() {
          
           <Route path="/jatekok" element={<Jatekok />} />
           <Route path="/jatekTorles" element={<JatekTorles />} />
+          <Route path="/keresNev" element={<KeresNev />} />
+          <Route path="/keresErtek" element={<KeresErtekeles />} />
         </Routes>
       </div>
     </Router>
