@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Jan 23. 09:02
+-- Létrehozás ideje: 2025. Nov 13. 13:24
 -- Kiszolgáló verziója: 10.4.28-MariaDB
 -- PHP verzió: 8.2.4
 
@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `marvel2024`
+-- Adatbázis: `marvel_2025_login`
 --
-CREATE DATABASE IF NOT EXISTS `marvel2024` DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
-USE `marvel2024`;
+CREATE DATABASE IF NOT EXISTS `marvel_2025_login` DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
+USE `marvel_2025_login`;
 
 -- --------------------------------------------------------
 
@@ -40,10 +40,6 @@ CREATE TABLE `felhasznalo` (
 --
 
 INSERT INTO `felhasznalo` (`felhasznalo_id`, `felhasznalo_nev`, `felhasznalo_jelszo`) VALUES
-(1, 'A', 'A'),
-(2, 'B', 'B'),
-(3, 'C', 'C'),
-(4, 'a@gmail.com', '$2b$12$QWgoH9hS.7UP5t.dL7UOpeBoALmPqTe9Q5hyML/KGahjYSfQ1jeha'),
 (5, 'Aa', '$2a$10$auhieAYn7dvRvnziq7bFHuNTcBVx/LMBUofF/wsbkz6rfTn95x6mO'),
 (6, 'Admin', '$2a$10$FNoGv4HB.4kVETfdb2QvbegXOqNv2BNpXWCDwFKla.www/Qz0wMB.');
 
@@ -86,7 +82,7 @@ CREATE TABLE `rang` (
 --
 
 INSERT INTO `rang` (`rang_id`, `rang_felhasznalo`, `rang_ertek`) VALUES
-(1, 5, 1),
+(1, 5, 0),
 (2, 6, 1);
 
 -- --------------------------------------------------------
