@@ -1,0 +1,65 @@
+Repo letoltese:
+git clone repo_cime
+
+Már letöltött repo frissitese:
+git pull
+
+Feltöltés repoba:
+git add .
+git commit -m "szoveg"
+git push
+
+Feltöltéskor ütközést írhat ki, akkor először git pull, 
+majd lila zöld színnel jelöli:
+-accept current
+-accept incoming
+-accept both
+- soronként is szerkeszthető, ctrl+z-vel visszavonhato...
+
+Fájl törlése:
+- egyik ember létrehozza, beleír, pusholja, másik pull-olja
+majd még mindig az egyik kitörli, eltűnik
+- másik próba: egyik ember létrehozza, beleír push-olja,
+másik pull-olja, beleír- nem pushol , az egyik ember törli, 
+majd másik ember pushol - ekkor ütközés
+ (2. beleírt, de már 1. törölte, 
+merge-lni kell, pusholni)
+akkor lesz törölhető ha helyi gépeken ugyanaz van mint githubon
+
+
+
+Branch-ek:
+git branch ag1  (új branchet/program-ágat hoz létre)
+
+git checkout ag1 (belelép a branch-be)
+
+git branch (ellenorzes, hogy megyik branch-ben vagy, *-az aktualis)
+
+branch ág feltöltése:
+git add .
+git commit -m "szoveg"
+git push  (erre ki fogja írni a parancsot, 
+hogy csak abba az agba töltsön: pl. git push origin ag1 )
+(VSCode-ban commit-publish)
+(erre már a githubra érkezik jelzés felül- lehet belőle majd pull request)
+
+Pull request:
+Az emberek saját branch-be dolgozzanak pl. 
+git branch Jani_bovit
+git checkout Jani_bovit
+Feltolti, több committal akár , ebbe a branch-be. 
+
+A main branchbe NE dolgozzatok!
+A main branch összefésülését egyéb branch-ekkel a FŐNÖK végzi.
+
+Ha kész a Jani_bovit ag a 2. ember Githubon rányom arra, hogy pull request-ként
+összefésülésre küldi a főnöknek
+
+A főnök a pull request menüben találja a kérést, elfogadja, merge-eli
+ütközések lehetnek.
+
+Kis feladatonként érdemes pull request-elni az ágakat.
+Ezután új ágat nyissatok pl. Jani_modosit
+
+
+
