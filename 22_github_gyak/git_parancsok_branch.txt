@@ -15,6 +15,7 @@ majd lila zöld színnel jelöli:
 -accept incoming
 -accept both
 - soronként is szerkeszthető, ctrl+z-vel visszavonhato...
+utána a Merge changes melletti + jelet nyomd meg és commit push (vagy git add. git commit git push)
 
 Fájl törlése:
 - egyik ember létrehozza, beleír, pusholja, másik pull-olja
@@ -43,23 +44,30 @@ hogy csak abba az agba töltsön: pl. git push origin ag1 )
 (VSCode-ban commit-publish)
 (erre már a githubra érkezik jelzés felül- lehet belőle majd pull request)
 
-Pull request:
+Pull request: 
+A pull request küldését főnök és beosztott is maga indíthatja, ez csak kérés
+arra, hogy legyen majd az ág beépítve a main branchbe) 
 Az emberek saját branch-be dolgozzanak pl. 
 git branch Jani_bovit
 git checkout Jani_bovit
 Feltolti, több committal akár , ebbe a branch-be. 
 
-A main branchbe NE dolgozzatok!
+A main branchbe NE dolgozzatok (de a backend.js-be lehet, ha //Főnök végpontjai, 
+//Beosztott végpontjai megjegyzést elhelyeztük- így nem akad össze)
+
 A main branch összefésülését egyéb branch-ekkel a FŐNÖK végzi.
 
 Ha kész a Jani_bovit ag a 2. ember Githubon rányom arra, hogy pull request-ként
 összefésülésre küldi a főnöknek
 
-A főnök a pull request menüben találja a kérést, elfogadja, merge-eli
-ütközések lehetnek.
+A főnök a pull request menüben találja a kérést, kéréseket, elfogadja, merge-eli
+ütközések lehetnek (Mark as resolved ,utána végig kell vinni merge.....több gomb)
 
 Kis feladatonként érdemes pull request-elni az ágakat.
 Ezután új ágat nyissatok pl. Jani_modosit
 
+parancssorból ág beépítése a mainbe
+be kell menni  a main-be: git checkout main, git branch-el ellenőrizd
+git merge ag1
 
 
