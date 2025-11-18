@@ -153,6 +153,22 @@ app.get('/jatekEgy/:jatek_id', (req, res) => {
         })
 })
 
+app.put('/jatekModosit/:jatek_id', (req, res) => {
+        const {jatek_id} =req.params
+        const {jatek_nev}=req.body
+        const sql=`update jatek 
+                    set jatek_nev=?
+                    where jatek_id=?
+                    `
+        pool.query(sql,[jatek_nev,jatek_id], (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+
+        return res.status(200).json({message:"Sikeres módosítás"})
+        })
+})
 
 
 

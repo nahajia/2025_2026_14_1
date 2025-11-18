@@ -37,3 +37,11 @@ table,tr,td,th{
 .alCim{
   text-align: center;
 }
+.modositDoboz{
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 20px;
+}
+input{
+  margin-bottom: 10px;
+}
