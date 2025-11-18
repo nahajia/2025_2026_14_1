@@ -44,8 +44,14 @@ const Navbar = () => {
                   <Link className="dropdown-item" to="/keresErtek">Keresés értékelés szerint</Link>
                 </li>
               </ul>
-    </li>
+              </li>
             
+
+              <li className="nav-item">
+                <Link className="nav-link" to="/jatekModositas">Játékok módosítása</Link>
+              </li>
+
+
           </ul>
         </div>
       </div>

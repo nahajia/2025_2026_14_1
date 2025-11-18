@@ -8,6 +8,7 @@ import Jatekok from './Jatekok/Jatekok';
 import JatekTorles from './JatekTorles/JatekTorles';
 import KeresNev from './JatekKereses/KeresNev';
 import KeresErtekeles from './JatekKereses/KeresesErtekeles';
+import JatekModositas from './JatekModositas/JatekModositas';
 
 
 // App komponens
@@ -23,6 +24,7 @@ function App() {
           <Route path="/jatekTorles" element={<JatekTorles />} />
           <Route path="/keresNev" element={<KeresNev />} />
           <Route path="/keresErtek" element={<KeresErtekeles />} />
+          <Route path="/jatekModositas" element={<JatekModositas />} />
         </Routes>
       </div>
     </Router>

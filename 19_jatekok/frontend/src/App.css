@@ -34,3 +34,6 @@ table,tr,td,th{
   padding: 20px;
   border: 1px solid black;
 }
+.alCim{
+  text-align: center;
+}
