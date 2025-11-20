@@ -22,7 +22,7 @@ table,tr,td,th{
   padding:15px;
   margin:auto;
 }
-.cim{
+.cim,.jatekCim{
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -44,4 +44,8 @@ table,tr,td,th{
 }
 input{
   margin-bottom: 10px;
+}
+.dobozElem{
+
+  margin:2px;
 }

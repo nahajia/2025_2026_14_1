@@ -48,6 +48,9 @@ const Navbar = () => {
             
 
               <li className="nav-item">
+                <Link className="nav-link" to="/jatekFelvitel">Játék felvitele</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/jatekModositas">Játékok módosítása</Link>
               </li>
 

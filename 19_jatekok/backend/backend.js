@@ -131,6 +131,21 @@ app.delete('/jatekTorles/:jatek_id', (req, res) => {
         })
 })
 
+app.post('/jatekFelvitel', (req, res) => {
+        const {jatek_nev,jatek_ertekeles,jatek_ar,jatek_leiras,jatek_tipus}=req.body
+        const sql=`insert into jatek 
+                    values (null,?,?,?,?,?)
+                    `
+        pool.query(sql,[jatek_nev,jatek_ertekeles,jatek_ar,jatek_leiras,jatek_tipus], (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+
+        return res.status(200).json({message:"Sikeres felvitel"})
+        })
+})
+
 app.get('/jatekEgy/:jatek_id', (req, res) => {
         const {jatek_id} =req.params
         const sql=`
@@ -155,12 +170,12 @@ app.get('/jatekEgy/:jatek_id', (req, res) => {
 
 app.put('/jatekModosit/:jatek_id', (req, res) => {
         const {jatek_id} =req.params
-        const {jatek_nev}=req.body
+        const {jatek_nev,jatek_ertekeles,jatek_ar,jatek_leiras,jatek_tipus}=req.body
         const sql=`update jatek 
-                    set jatek_nev=?
+                    set jatek_nev=?,jatek_ertekeles=?,jatek_ar=?,jatek_leiras=?,jatek_tipus=?
                     where jatek_id=?
                     `
-        pool.query(sql,[jatek_nev,jatek_id], (err, result) => {
+        pool.query(sql,[jatek_nev,jatek_ertekeles,jatek_ar,jatek_leiras,jatek_tipus,jatek_id], (err, result) => {
         if (err) {
             console.log(err)
             return res.status(500).json({error:"Hiba"})
