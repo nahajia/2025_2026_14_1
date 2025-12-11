@@ -1,7 +1,7 @@
 import { useState } from 'react';
 const User=()=>{
     
-    const [userid, setUserid] = useState(localStorage.getItem("userid"));
+    const [userid] = useState(localStorage.getItem("userid"));
     
     return (
         <div>
