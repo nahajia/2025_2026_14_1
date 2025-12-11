@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Cim from './Cim';
 
@@ -27,8 +27,9 @@ const Login = () => {
 
       localStorage.setItem('token', data.token);
       localStorage.setItem('role', data.role);
+      localStorage.setItem('userid', data.userid);
 
-      alert('Sikeres bejelentkezés!');
+      alert(data.userid);
       navigate('/menu1');
     } catch (err) {
       setError(err.message);

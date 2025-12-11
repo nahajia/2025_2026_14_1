@@ -21,7 +21,8 @@ router.post('/login', (req, res) => {
     SELECT 
       felhasznalo_nev, 
       felhasznalo_jelszo,
-      rang_nev AS role
+      rang_nev AS role,
+      felhasznalo_id
     FROM felhasznalo
     inner join rang
     on felhasznalo_rang=rang_id
@@ -53,6 +54,7 @@ router.post('/login', (req, res) => {
       // TOKEN + ROLE
       const token = jwt.sign(
         {
+          userid: rows[0].felhasznalo_id,
           username: rows[0].felhasznalo_nev,
           role: rows[0].role
         },
@@ -62,7 +64,9 @@ router.post('/login', (req, res) => {
 
       return res.json({
         token: token,
-        role: rows[0].role
+        role: rows[0].role,
+        userid: rows[0].felhasznalo_id,
+        username: rows[0].felhasznalo_nev,
       });
     });
   });
