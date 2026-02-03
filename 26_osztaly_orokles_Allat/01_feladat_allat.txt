@@ -1,0 +1,4 @@
+
+1. Tengerimalac felvitele, öröklés, példányosítás
+2. Tengerimalac bővítése mezővel: Félős: true/false, kiírás
+3. Új metódus, elbújik, mindenképp, de ha félősebb más....

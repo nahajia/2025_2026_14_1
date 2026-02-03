@@ -1,0 +1,7 @@
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_SZEMELY\bin\Debug\ConsoleApp_SZEMELY.exe.config
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_SZEMELY\bin\Debug\ConsoleApp_SZEMELY.exe
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_SZEMELY\bin\Debug\ConsoleApp_SZEMELY.pdb
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_SZEMELY\obj\Debug\ConsoleApp_SZEMELY.csprojAssemblyReference.cache
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_SZEMELY\obj\Debug\ConsoleApp_SZEMELY.csproj.CoreCompileInputs.cache
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_SZEMELY\obj\Debug\ConsoleApp_SZEMELY.exe
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_SZEMELY\obj\Debug\ConsoleApp_SZEMELY.pdb

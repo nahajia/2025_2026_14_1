@@ -1,0 +1,7 @@
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_KULDETES\bin\Debug\ConsoleApp_KULDETES.exe.config
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_KULDETES\bin\Debug\ConsoleApp_KULDETES.exe
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_KULDETES\bin\Debug\ConsoleApp_KULDETES.pdb
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_KULDETES\obj\Debug\ConsoleApp_KULDETES.csprojAssemblyReference.cache
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_KULDETES\obj\Debug\ConsoleApp_KULDETES.csproj.CoreCompileInputs.cache
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_KULDETES\obj\Debug\ConsoleApp_KULDETES.exe
+D:\nahajia\2025_2026_14_1\29_osztaly_gyakorlo_szemely_kuldetes\ConsoleApp_KULDETES\obj\Debug\ConsoleApp_KULDETES.pdb

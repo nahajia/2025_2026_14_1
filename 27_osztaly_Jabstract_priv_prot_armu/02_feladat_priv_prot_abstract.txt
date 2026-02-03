@@ -1,0 +1,4 @@
+
+1. Motor osztály, öröklődjön a Járműből
+2. Listába berakni autot és motort
+3. polimorfizmust megmutatni, foreach járműre

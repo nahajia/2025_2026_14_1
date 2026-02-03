@@ -1,0 +1,4 @@
+
+1. AsztaliGep osztályt készíteni
+2. Add-olni mindkét listába
+3. grafikát rajzl metódusát meghívni
