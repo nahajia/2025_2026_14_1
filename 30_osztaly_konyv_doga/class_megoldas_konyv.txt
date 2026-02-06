@@ -1,0 +1,114 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    // Interfész
+    interface IKolcsonozheto
+    {
+        void Kolcsonzes();
+    }
+
+    // Alaposztály
+    class KonyvtariElem
+    {
+        protected string cim;
+        protected int ev;
+
+        public KonyvtariElem(string cim, int ev)
+        {
+            this.cim = cim;
+            this.ev = ev;
+        }
+
+        public virtual void Bemutatas()
+        {
+            Console.WriteLine($"Cím: {cim}, megjelenés éve: {ev}");
+        }
+
+        public virtual void Allapot()
+        {
+            Console.WriteLine("A könyvtári elem jó állapotban van.");
+        }
+    }
+
+    // Kölcsönözhető könyv
+    class Konyv : KonyvtariElem, IKolcsonozheto
+    {
+        private string szerzo;
+
+        public Konyv(string cim, int ev, string szerzo)
+            : base(cim, ev)
+        {
+            this.szerzo = szerzo;
+        }
+
+        public override void Bemutatas()
+        {
+            Console.WriteLine($"Könyv: {cim}, szerző: {szerzo}, év: {ev}");
+        }
+
+        public override void Allapot()
+        {
+            Console.WriteLine("A könyv kissé használt, de jó állapotú.");
+        }
+
+        public void Kolcsonzes()
+        {
+            Console.WriteLine("A könyv kikölcsönözve 30 napra.");
+        }
+    }
+
+    // NEM kölcsönözhető hírlap
+    class Hirlap : KonyvtariElem
+    {
+        private int lapszam;
+
+        public Hirlap(string cim, int ev, int lapszam)
+            : base(cim, ev)
+        {
+            this.lapszam = lapszam;
+        }
+
+        public override void Bemutatas()
+        {
+            Console.WriteLine($"Hírlap: {cim}, év: {ev}, lapszám: {lapszam}");
+        }
+
+        public override void Allapot()
+        {
+            Console.WriteLine("A hírlap csak helyben olvasható.");
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Konyv konyv1 = new Konyv("Egri csillagok", 1901, "Gárdonyi Géza");
+            Hirlap hirlap1 = new Hirlap("Napi Hírek", 2024, 20);
+            Konyv konyv2 = new Konyv("Harry Potter", 1901, "J.K. Rowling");
+            Hirlap hirlap2 = new Hirlap("Hvg", 2024, 15);
+
+            List<KonyvtariElem> lista = new List<KonyvtariElem>();
+            lista.Add(konyv1);
+            lista.Add(konyv2);
+            lista.Add(hirlap1);
+            lista.Add(hirlap2);
+
+            foreach (var item in lista)
+            {
+                item.Bemutatas();
+                item.Allapot();
+                Console.WriteLine("-----------------");
+            }
+            konyv1.Kolcsonzes();
+            konyv2.Kolcsonzes();
+
+            Console.ReadKey();
+        }
+    }
+}

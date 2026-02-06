@@ -1,0 +1,19 @@
+
+1. Osztály létrehozása a "versenyzo" tábla összes mezőjére (karakterhelyesen)
+2. A Versenyző osztály bővítése új metódussal, melynek
+ visszatérési értéke igaz logikai érték, ha a versenyző neve tartalmaz kötőjelet,
+ egyébként hamis
+3. A Versenyző osztály bővítése új tulajdonsággal(property),
+ mely értéke igaz logikai érték, ha a név üres, egyébként hamis
+4. Versenyzők letárolása főprogramban
+5. Azok megszámolása, akik 700 pont felettiek, kiírás
+6. Két szám(pont) bekérése, a két pont közöttiek nevének, pontjának kiírása.
+7. A legnagyobb pont kiírása, és kié-versenyző neve.
+8. A magyarok átlagpontja, kiírás.
+9. Ország kódja szerint a versenyzők száma.
+10. Ország kódja szerint a versenyzők száma, név szerint rendezetten.
+11. Ország kódja szerint a versenyzők száma, 
+rendezett a versenyzőszám szerint csökkenően.
+12. Országkód bekérése, abból az országból a versenyzők nevének, 
+pontjának kiírása fájlba.
+
