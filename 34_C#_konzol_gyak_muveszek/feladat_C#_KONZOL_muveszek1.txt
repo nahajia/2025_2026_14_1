@@ -1,0 +1,23 @@
+A Magyar Köztársaság Érdemes Művésze díj állami kitüntetés, amelyet évente adnak át.
+A díjat mindenki egyszer kaphatja meg, akkor is, ha több művészeti ágban 
+is tevékenykedik. A 2000-2013. között díjazottak adatai állnak rendelkezésre.
+
+1. Osztály létrehozása a "szemely" tábla összes mezőjére (karakterhelyesen)
+2. A Szemely osztály bővítése új metódussal, melynek
+ visszatérési értéke egy szám, a szemely neve hány szóból áll
+(kötőjeles 1 szónak számít)!
+3. A Szemely osztály bővítése új tulajdonsággal(property),
+ mely értéke igaz logikai érték, ha volt előző díja, egyébként hamis
+4. Személyek letárolása főprogramban
+5. A Liszt Ferenc díjasok kiírása: név, díj
+6. A Liszt Ferenc díjasok számának kiírása
+7. Katalin keresztnevűek kiírása, név, év 
+8. Katalin keresztnevűek száma
+9. Évenként hány díj volt: év, darabszám kiírása
+10. Díjakból hány volt: díj neve, darabszám kiírása, darabszám szerint csökkenő
+11. Év bekérése, és fájlba kiírni: név, előző díj, díj szerinti ábécé rendben, 
+fájl neve az év, pl. 2010.txt
+Ha olyan évet ad meg, amire nincs adat, akkor írja ki, hogy nincs találat.
+12. Akiknek nem volt előző díja, azok kiírása fájlba, abécé rendben, 
+nincsdij.txt fájlba
+

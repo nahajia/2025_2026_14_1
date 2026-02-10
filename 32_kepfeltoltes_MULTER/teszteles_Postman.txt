@@ -1,0 +1,3 @@
+body raw json helyett form-data fülön
+mező neve, text, adat
+kep,file, tallózni a képfájlt
