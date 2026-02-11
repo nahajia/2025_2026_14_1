@@ -1,0 +1,19 @@
+
+1. Osztály létrehozása a "hirdetes" tábla összes mezőjére 
+(karakterhelyesen, datum -string legyen)
+2. A Hirdetes osztály bővítése új metódussal, melynek
+ visszatérési értéke egy drága/közepes/olcsó, ( az ártól függően 100000/10000 Euró)
+3. A Hirdetes osztály bővítése új tulajdonsággal(property),
+ mely értéke a dátum: év-hónap-nap formátumban.
+4. A Hirdetes osztály bővítése új tulajdonsággal(property),
+ mely értéke a hónap neve pl. május
+5. Hirdetések letárolása főprogramban
+6. Az eladott ingatlanok kilistázása, ár, dátum
+7. Az eladott ingatlanok darabszáma
+8. Állapot szerint hány ingatlan volt, állapot neve, darabszám, 
+darabszám szerint csökkenően
+9. Ár bekérése, attól olcsóbbak kiírása, ha nincs olyan, írja ki: Nincs találat
+10. Drága ingatlanok fájlba írása: ár, állapot, dátum
+11. A legdrágább eladott ingatlan ára és eladás dátuma.
+12. Drága ingatlanok között hány olyan volt, melyet csak ármódosítás után, de eladtak.
+
