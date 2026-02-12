@@ -76,5 +76,16 @@ namespace ConsoleApp1
                 
             }
         }
+        public string hoNev
+        {
+            get
+            {
+                string[] kecske = this.datum.Split('T');
+                string[] szocske = kecske[0].Split('-');
+                int ho = Convert.ToInt32(szocske[1]);
+                string[] hoTomb = { "Jan", "Feb", "Mar", "Ápr", "Máj", "Jún", "Júl", "Aug", "Szep", "Okt", "Nov", "Dec" };
+                return hoTomb[ho-1];
+            }
+        }
     }
 }
