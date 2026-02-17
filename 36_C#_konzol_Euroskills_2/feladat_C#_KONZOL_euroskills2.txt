@@ -1,0 +1,15 @@
+
+
+1. Szakma id szerint hány versenyző volt, 
+szakma id és darabszám legyen kiírva, darabszám szerint csökkenően
+2. Ország kódja szerint mi volt a max pontszám, 
+országkód és maxpont legyen megyjelenítve, országkód szerint ábécé rendben
+3. Ország kódja szerint mi volt az átlag pontszám, 
+ország kód és átlagpont legyen kiírva, átlagpont szernit csökkenően
+4. Egy szó vagy betű bekérése, azok kiírása fájlba, akiknek a nevében vagy 
+az ország kódjában szerepel az a részlet, kis/nagy betű nem számít a kereséskor
+keresett.txt fájlba, versenyző nevének és országának kiírása
+A fájl alján ott legyen hogy hány darab találat van.
+
+
+

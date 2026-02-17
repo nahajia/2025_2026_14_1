@@ -15,5 +15,6 @@ darabszám szerint csökkenően
 9. Ár bekérése, attól olcsóbbak kiírása, ha nincs olyan, írja ki: Nincs találat
 10. Drága ingatlanok fájlba írása: ár, állapot, dátum
 11. A legdrágább eladott ingatlan ára és eladás dátuma.
-12. Drága ingatlanok között hány olyan volt, melyet csak ármódosítás után, de eladtak.
+12. Drága ingatlanok között hány olyan volt, melyet csak ármódosítás után, de eladtak 
+(feltételezhetjük, hogy nem volt olyan, amit több módosítás után nem adtak el)
 
