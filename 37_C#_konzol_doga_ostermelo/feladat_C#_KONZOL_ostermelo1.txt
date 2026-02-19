@@ -1,0 +1,18 @@
+
+1. Osztály létrehozása a "kiszallitasok" tábla összes mezőjére 
+(karakterhelyesen, datum -string legyen)
+2. A Kiszallitasok osztály bővítése új metódussal, melynek
+ visszatérési értéke az egy/több szó, attól függően, 
+hogy 1 vagy több karton van a rendelésben
+3. Az osztály bővítése új tulajdonsággal(property),
+ mely értéke csak a hónap pl. 5
+4. Kiszállítások letárolása főprogramban
+5. Partnerenként hány kiszállítás történt, partnerid és darabszám kiírása,
+ darabszám szerint csökkenően.
+6. Partner azonosítójának bekérése és azok kiírása fájlba, partner id, dátum.
+Fájl neve: partner_1.txt legyen , _ után a partnerid
+7. Gyümölcslevenként mennyi karton lett összesen kiszállítva, gyumleid és összeg, 
+összeg szerint csökkenően
+8. A legnagyobb kartonszámban hány kiszállítás történt.  
+(a legnagyobb 16, de számítás eredménye legyen)
+

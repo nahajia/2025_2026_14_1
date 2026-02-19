@@ -79,15 +79,35 @@ namespace ConsoleApp1
             }
             File.WriteAllLines(beOrszag +".txt", kimenet);
             */
-
-            //2. feladatsor
             var Feladat1 = tomb.GroupBy(x => x.szakmaId).OrderByDescending(x=> x.Count());
             foreach (var item in Feladat1)
             {
-                Console.WriteLine($"{item.Key}, {item.Count()}");
+                Console.WriteLine($" szakmaid: {item.Key} : {item.Count()}");
             }
 
+            var Feladat2 = tomb.GroupBy(x => x.orszagId).OrderBy(x=> x.Key);
+            foreach (var item in Feladat2)
+            {
+                Console.WriteLine($"{item.Key} : {item.Max(x=> x.pont)}");
+            }
 
+            var Feladat3 = tomb.GroupBy(x => x.orszagId).OrderByDescending(x=> x.Average(y=> y.pont));
+            Console.WriteLine($"3. feladat:");
+            foreach (var item in Feladat3)
+            {
+                Console.WriteLine($"{item.Key} : {item.Average(x=> x.pont):f2}");
+            }
+
+            Console.Write($"Adj meg kérlek egy szót, vagy betűt: ");
+            string beKer = Console.ReadLine();
+            List<string> kimenet = new List<string>();
+            var Feladat4 = tomb.Where(x => x.nev.ToLower().Contains(beKer.ToLower()) || x.orszagId.ToLower().Contains(beKer.ToLower()));
+            foreach (var item in Feladat4)
+            {
+                kimenet.Add($"{item.nev} : {item.orszagId}");
+            }
+            kimenet.Add($"Találatok száma: {Feladat4.Count()}");
+            File.WriteAllLines("keresett.txt", kimenet);
             Console.ReadKey();
         }
     }
