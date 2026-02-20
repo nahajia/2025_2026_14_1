@@ -1,0 +1,19 @@
+
+
+3 fül: Művészek, Keresés, Felvitel
+
+Művészek fülön:
+lenyíló listába a művész neve, induláskor első aktív
+ha kiválasztjuk, alatta label-ekben írja ki : név, év, korábbi díj
+
+
+Keresés fülön:
+beviteli mezőben beírunk egy keresendő szót, betűt
+gombnyomásra keresse meg, listboxba tegye a megtalált neveket
+ha nem írunk be szót, írja ki, hogy adja meg
+ha nincs találat, vagy hiba írja ki: Nincs találat vagy hiba
+
+Felvitel fülön:
+beviteli mező névre, évre, korábbi díjra, gombnyomásra vigye fel
+csak a név kötelező, ha nem adjuk meg írja ki
+ha nem viszi fel vagy konvertálási hiba, annyit írjon hiba

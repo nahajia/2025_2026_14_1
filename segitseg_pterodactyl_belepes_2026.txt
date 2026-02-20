@@ -1,0 +1,23 @@
+﻿Szerver címe, böngészőbe:	https://nodejs.dszcbaross.edu.hu
+https://nodejs102.dszcbaross.edu.hu/
+
+Phpmyadmin böngészőbe:	https://phpmyadmin.dszcbaross.edu.hu
+
+MINDENHOVA a saját beállításaidnak megfelelő adatot írj: 
+A szerver console menüjében és a Database menüjében találod!
+
+
+Az adatb-d nevét a backend.js-ben a kapcsolat fv-ben át kell írnod!!!!	
+
+const port = 21002
+var connection;
+function kapcsolat(){
+ connection = mysql.createConnection({
+    host: '192.168.100.103',
+    user: 'u34_9nDNC',
+    password: '37I@K.MoIjn=sgNH15r',
+    database: 's34_db'
+  })
+  
+  connection.connect()
+}
