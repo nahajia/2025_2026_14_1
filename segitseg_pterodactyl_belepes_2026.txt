@@ -14,8 +14,8 @@ var connection;
 function kapcsolat(){
  connection = mysql.createConnection({
     host: '192.168.100.103',
-    user: 'u34_9nDNC',
-    password: '37I@K.MoIjn=sgNH15r',
+    user: 'u34_9nD......',
+    password: '37I@K.MoIjn=s......',
     database: 's34_db'
   })
   
