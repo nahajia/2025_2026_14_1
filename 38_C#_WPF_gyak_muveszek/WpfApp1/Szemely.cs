@@ -12,6 +12,11 @@ namespace WpfApp1
         public string nev { get; set; }
         public int ev { get; set; }
         public string elozo { get; set; }
+
+        public string azNev
+        {
+            get { return az + "-" + nev; }
+        }
        
     }
 }

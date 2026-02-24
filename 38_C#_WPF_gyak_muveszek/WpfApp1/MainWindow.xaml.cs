@@ -28,7 +28,7 @@ namespace WpfApp1
             List<Szemely> tomb = Backend.GET("http://localhost:3000/szemely").Send().As<List<Szemely>>();
             //MessageBox.Show($"{tomb[0].nev}");
             cb_muvesz.ItemsSource = tomb;
-            cb_muvesz.DisplayMemberPath = "az"+"nev";
+            cb_muvesz.DisplayMemberPath = "azNev";
             cb_muvesz.SelectedIndex = 0;
 
         }
@@ -40,6 +40,35 @@ namespace WpfApp1
             lb_nev.Content = valaszt.nev;
             lb_ev.Content = valaszt.ev;
             lb_elozo.Content = valaszt.elozo;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (tbx_szo.Text=="")
+            {
+                MessageBox.Show("Kötelező megadni a keresendő szót!");
+            }
+            else
+            {
+                try
+                {
+                    string szo = tbx_szo.Text;
+                    var bemenet = new
+                    {
+                        szo = szo
+                    };
+                    List<Szemely> kimenet = Backend.POST("http://localhost:3000/keresettSzo").Body(bemenet).Send().As<List<Szemely>>();
+                    lbx_kimenet.ItemsSource = kimenet;
+                    lbx_kimenet.DisplayMemberPath = "nev";
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show($"Hiba");
+                    
+                }
+               
+            }
+            
         }
     }
 }
