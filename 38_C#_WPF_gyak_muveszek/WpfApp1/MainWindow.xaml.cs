@@ -30,7 +30,11 @@ namespace WpfApp1
             cb_muvesz.ItemsSource = tomb;
             cb_muvesz.DisplayMemberPath = "azNev";
             cb_muvesz.SelectedIndex = 0;
-
+            //dij kereses
+            List<Szemely> dijak = Backend.GET("http://localhost:3000/dijak").Send().As<List<Szemely>>();
+            cbx_dijak.ItemsSource = dijak;
+            cbx_dijak.DisplayMemberPath = "elozo";
+            cbx_dijak.SelectedIndex = 0;
         }
 
         private void Cb_muvesz_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -68,6 +72,44 @@ namespace WpfApp1
                 }
                
             }
+            
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (tbx_nev.Text == "")
+                {
+                    MessageBox.Show("Kötelező nevet megadni!");
+                }
+                else if (tbx_ev.Text == "")
+                {
+                    MessageBox.Show("Kötelező évet megadni!");
+                }
+                else if (!(int.Parse(tbx_ev.Text) <= 2026 && int.Parse(tbx_ev.Text) >= 1900))
+                {
+                    MessageBox.Show("1900 és 2026 közötti értéket adj meg!");
+                }
+                else
+                {
+                    var bemenet = new
+                    {
+                        nev = tbx_nev.Text,
+                        ev = Convert.ToInt16(tbx_ev.Text),
+                        elozo = tbx_elozo.Text
+                    };
+                    string kimenet = Backend.POST("http://localhost:3000/szemelyFelvitel").Body(bemenet).Send().As<string>();
+                    MessageBox.Show(kimenet);
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Hiba!");
+            }
+
+            
             
         }
     }

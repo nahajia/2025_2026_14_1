@@ -73,6 +73,24 @@ app.post('/szemelyFelvitel', (req, res) => {
         })
 })
 
+app.get('/dijak', (req, res) => {
+        const sql=`
+                SELECT DISTINCT elozo FROM szemely WHERE elozo !=''
+                `
+        pool.query(sql, (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
+
+        return res.status(200).json(result)
+        })
+})
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
