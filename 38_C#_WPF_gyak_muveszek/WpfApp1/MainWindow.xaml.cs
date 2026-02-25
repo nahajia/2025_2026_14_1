@@ -112,5 +112,19 @@ namespace WpfApp1
             
             
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            
+            string valaszt = (cbx_dijak.SelectedItem as Szemely).elozo;
+            var bemenet = new
+            {
+                szo = valaszt
+            };
+
+            List<Szemely> kimenet = Backend.POST("http://localhost:3000/dijKeres").Body(bemenet).Send().As<List<Szemely>>();
+            lbx_dijTalalat.ItemsSource = kimenet;
+            lbx_dijTalalat.DisplayMemberPath = "kotojel_nev";
+        }
     }
 }

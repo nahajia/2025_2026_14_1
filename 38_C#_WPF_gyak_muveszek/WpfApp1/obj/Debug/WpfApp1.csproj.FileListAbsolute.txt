@@ -1,7 +1,6 @@
 D:\nahajia\2025_2026_14_1\38_C#_WPF_gyak_muveszek\WpfApp1\bin\Debug\WpfApp1.exe.config
 D:\nahajia\2025_2026_14_1\38_C#_WPF_gyak_muveszek\WpfApp1\bin\Debug\WpfApp1.exe
 D:\nahajia\2025_2026_14_1\38_C#_WPF_gyak_muveszek\WpfApp1\bin\Debug\WpfApp1.pdb
-D:\nahajia\2025_2026_14_1\38_C#_WPF_gyak_muveszek\WpfApp1\bin\Debug\NetworkHelper.dll
 D:\nahajia\2025_2026_14_1\38_C#_WPF_gyak_muveszek\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
 D:\nahajia\2025_2026_14_1\38_C#_WPF_gyak_muveszek\WpfApp1\obj\Debug\MainWindow.g.cs
 D:\nahajia\2025_2026_14_1\38_C#_WPF_gyak_muveszek\WpfApp1\obj\Debug\App.g.cs

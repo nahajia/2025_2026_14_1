@@ -17,6 +17,13 @@ namespace WpfApp1
         {
             get { return az + "-" + nev; }
         }
+        public string kotojel_nev
+        {
+            get
+            {
+                return nev + "-" + elozo;
+            }
+        }
        
     }
 }

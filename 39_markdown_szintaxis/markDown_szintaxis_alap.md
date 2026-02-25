@@ -24,8 +24,8 @@ Rendezett lista:
 3. Harmadik
 5. Linkek és képek
 [wikipédi](https://hu.wikipedia.org/wiki/Wiki)
-![Kép leírása](https://example.com/kep.png)
-![Alternatív szöveg](kepem.png)
+
+![Alternatív szöveg](kepecskek/2.png)
 
 7. Elválasztó vonal
 ---

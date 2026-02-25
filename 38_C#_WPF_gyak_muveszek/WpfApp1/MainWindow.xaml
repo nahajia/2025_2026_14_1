@@ -43,7 +43,7 @@
             <TabItem Header="Korábbi díj keresés" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="110" Margin="-2,-2,-54,0">
                 <Grid Background="#FFE5E5E5">
                     <ComboBox Name="cbx_dijak" HorizontalAlignment="Left" Height="34" Margin="66,42,0,0" VerticalAlignment="Top" Width="216"/>
-                    <Button Content="Keresés" HorizontalAlignment="Left" Height="34" Margin="296,42,0,0" VerticalAlignment="Top" Width="104"/>
+                    <Button Content="Keresés" HorizontalAlignment="Left" Height="34" Margin="296,42,0,0" VerticalAlignment="Top" Width="104" Click="Button_Click_2"/>
                     <ListBox Name="lbx_dijTalalat" HorizontalAlignment="Left" Height="230" Margin="418,42,0,0" VerticalAlignment="Top" Width="342"/>
                 </Grid>
             </TabItem>
