@@ -2,7 +2,7 @@
 1. Osztály létrehozása a "hirdetes" tábla összes mezőjére 
 (karakterhelyesen, datum -string legyen)
 2. A Hirdetes osztály bővítése új metódussal, melynek
- visszatérési értéke egy drága/közepes/olcsó, ( az ártól függően 100000/10000 Euró)
+ visszatérési értéke egy drága/közepes/olcsó, ( az ártól függően 100.000/10.000 Euró)
 3. A Hirdetes osztály bővítése új tulajdonsággal(property),
  mely értéke a dátum: év-hónap-nap formátumban.
 4. A Hirdetes osztály bővítése új tulajdonsággal(property),

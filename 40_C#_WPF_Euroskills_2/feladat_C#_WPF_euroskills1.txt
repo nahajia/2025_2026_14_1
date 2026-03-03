@@ -1,0 +1,23 @@
+Szükséges backend végpontokat el kel készíteni!
+
+1. fül: Név szerinti keresés
+Beírunk egy nevet/részletet és gombnyomásra listboxba név és pont
+(ha üres írja ki kötelező, ha nem talál írja ki hiba)
+
+2. fül: Szakma keresés
+Szakma neve lenyílóban 
+Változtatásra olyan szakmájú versenyzők neve, országakódja, pontja listboxba
+(országneve)
+
+3. fül: Ország keresés
+Ország neve lenyílóban
+Változtatásra ország versenyzői datagridbe
+
+4. fül: Felvitel
+Szakma, ország lenyílóban, , többit beírni
+hibakezelések
+
+5. fül: Szakma és Ország keresés
+Szakma neve lenyílóban, Országlenyílóban
+(0.indexű legyen plusz sor: -------- ha ezt választjuk eszerint ne keressen)
+
