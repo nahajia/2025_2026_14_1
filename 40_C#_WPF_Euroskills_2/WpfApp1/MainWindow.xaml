@@ -33,13 +33,37 @@
                     <ListBox Name="lbx_szakmaTalalat" HorizontalAlignment="Left" Height="207" Margin="58,160,0,0" VerticalAlignment="Top" Width="440"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TabItem" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="54">
+            <TabItem Header="Ország keresés" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="103" Margin="-2,-2,-47,0">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <ComboBox Name="cbx_orszag" HorizontalAlignment="Left" Margin="88,65,0,0" VerticalAlignment="Top" Width="120"/>
-                    <DataGrid Name="dg_orszagTalalat" HorizontalAlignment="Left" Height="178" Margin="88,179,0,0" VerticalAlignment="Top" Width="494"/>
+                    <ComboBox Name="cbx_orszag" HorizontalAlignment="Left" Margin="88,65,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Cbx_orszag_SelectionChanged"/>
+                    <DataGrid Name="dg_orszagTalalat" HorizontalAlignment="Left" Height="178" Margin="88,179,0,0" VerticalAlignment="Top" Width="494" SelectionChanged="Dg_orszagTalalat_SelectionChanged"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Felvitel" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="54">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox Name="tx_nev" HorizontalAlignment="Left" Height="23" Margin="146,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Versenyző neve" HorizontalAlignment="Left" Margin="27,75,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Versenyző szakmája" HorizontalAlignment="Left" Margin="27,123,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Versenyző országa" HorizontalAlignment="Left" Margin="27,169,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Pontszám" HorizontalAlignment="Left" Margin="27,213,0,0" VerticalAlignment="Top"/>
+                    <ComboBox Name="cbx_vszakma" HorizontalAlignment="Left" Margin="206,123,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox Name="cbx_vorszag" HorizontalAlignment="Left" Margin="206,173,0,0" VerticalAlignment="Top" Width="120"/>
+                    <TextBox Name="tx_pont" HorizontalAlignment="Left" Height="23" Margin="236,213,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+                    <Button HorizontalAlignment="Left" Margin="135,276,0,0" VerticalAlignment="Top" Width="75">
+                        <Button Content="Button" Width="75" Click="Button_Click"/>
+                    </Button>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Keresés két szempont  szerint" HorizontalAlignment="Left" Width="177" Margin="-2,-2,-121,2">
+                <Grid Background="#FFE5E5E5">
+                    <ComboBox Name="cbx_szakma5" HorizontalAlignment="Left" Margin="77,63,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox Name="cbx_orszag5" HorizontalAlignment="Left" Margin="272,64,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Keresés" HorizontalAlignment="Left" Margin="443,59,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+                    <DataGrid Name="dg_keres5" HorizontalAlignment="Left" Height="172" Margin="91,130,0,0" VerticalAlignment="Top" Width="486"/>
                 </Grid>
             </TabItem>
         </TabControl>

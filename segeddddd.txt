@@ -1,0 +1,1 @@
+dijak.Insert(0, new Szemely { az = 0, elozo = "-------" });

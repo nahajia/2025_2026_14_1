@@ -58,6 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Orszag.cs" />
     <Compile Include="Szakma.cs" />
     <Compile Include="Versenyzo.cs" />
     <Page Include="MainWindow.xaml">
