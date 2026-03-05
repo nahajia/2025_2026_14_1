@@ -37,7 +37,97 @@ app.get('/versenyzo', (req, res) => {
         return res.status(200).json(result)
         })
 })
+app.post('/keresesNev', (req, res) => {
+        const {keresendo}=req.body
+        const sql=`
+                select *
+                from versenyzo 
+                WHERE versenyzo.nev like ?
+                `
+        pool.query(sql,[`%${keresendo}%`], (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
 
+        return res.status(200).json(result)
+        })
+})
+app.get('/szakma', (req, res) => {
+        const sql=`
+                select *
+                from szakma
+                `
+        pool.query(sql, (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
+
+        return res.status(200).json(result)
+        })
+})
+app.post('/keresSzakma', (req, res) => {
+        const {azonosito}=req.body
+        const sql=`
+                select *
+                from versenyzo
+                WHERE versenyzo.szakmaId=?
+                `
+        pool.query(sql,[azonosito], (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
+
+        return res.status(200).json(result)
+        })
+})
+app.get('/orszag', (req, res) => {
+        const sql=`
+                select *
+                from orszag
+                `
+        pool.query(sql, (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
+
+        return res.status(200).json(result)
+        })
+})
+app.post('/keresOrszag', (req, res) => {
+        const {azonosito}=req.body
+        const sql=`
+                select *
+                from versenyzo
+                WHERE versenyzo.orszagId=?
+                `
+        pool.query(sql,[azonosito], (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
+
+        return res.status(200).json(result)
+        })
+})
 
 
 

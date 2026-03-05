@@ -1,0 +1,48 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792">
+            <TabItem Header="Név szerint">
+                <Grid Background="#FFE5E5E5">
+                    <Label Content="Keresendő név" HorizontalAlignment="Left" Margin="49,73,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="tb_keres" HorizontalAlignment="Left" Height="23" Margin="171,76,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+
+                    <Button Name="btn_gomb" Content="Button" HorizontalAlignment="Left" Margin="333,77,0,0" VerticalAlignment="Top" Width="75" Click="Btn_gomb_Click"/>
+                    <ListBox Name="lbx_talalatok" HorizontalAlignment="Left" Height="239" Margin="79,140,0,0" VerticalAlignment="Top" Width="533" RenderTransformOrigin="0.5,0.5">
+                        <ListBox.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="0.22"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </ListBox.RenderTransform>
+                    </ListBox>
+                    <Label  Name="lb_hiba" Content="" HorizontalAlignment="Left" Margin="463,77,0,0" VerticalAlignment="Top" Width="161"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Szakma keresés">
+                <Grid Background="#FFE5E5E5">
+                    <ComboBox  Name="cbx_szakma" HorizontalAlignment="Left" Margin="35,61,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Cbx_szakma_SelectionChanged"/>
+                    <ListBox Name="lbx_szakmaTalalat" HorizontalAlignment="Left" Height="207" Margin="58,160,0,0" VerticalAlignment="Top" Width="440"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabItem" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="54">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <ComboBox Name="cbx_orszag" HorizontalAlignment="Left" Margin="88,65,0,0" VerticalAlignment="Top" Width="120"/>
+                    <DataGrid Name="dg_orszagTalalat" HorizontalAlignment="Left" Height="178" Margin="88,179,0,0" VerticalAlignment="Top" Width="494"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
