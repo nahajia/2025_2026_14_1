@@ -1,0 +1,11 @@
+A következő részek legyenek benne a github repo readme.md-jében
+- bevezetés: folyamatos szöveg, miről szól a weblap
+- készítők
+-fő funkciók: nem bejelentkezett, bejelentkezett, admin
+-architektúra: backend-express, frontend: react, adatb:mysql
+-telepites, futtatas git clone....
+-adatbázis kép phpmyadminból kimásolt
+-képernyőképek: képek a weblap funkcióiról, pl. kitöltött űrlap, értelmes szép adatok!!!
+-API végpontok: backend-edet mestintnek küldd be és a végpontokat táblázatba helyezze
+-munkamegosztás: vagy külön pontban, vagy a funkcióknál-képeknél-végpontoknál szerepeltetni, hogy melyik rész kié
+-saját szellemi termékünk.....legyen egy mondat
