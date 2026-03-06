@@ -1,0 +1,4 @@
+[build]
+  base = "13_palyaorientacio/palyaorientacio"
+  command = "npm start"
+  publish = "build"
