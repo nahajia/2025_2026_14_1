@@ -1,0 +1,26 @@
+3 fül legyen
+
+1. Osztály létrehozása a "kiszallitasok" tábla összes mezőjére 
+(karakterhelyesen, datum -string legyen) , 
+a partner neve, települése legyen még plusz mező
+2. 1. fül: Keresés:
+beviteli mezőben beírjuk egy személy nevét vagy részletét pl. Béla
+gombnyomásra megkeresi milyen kiszallitások történtek a partnerhez
+listbox-ba a találatokat: dátum-partner neve-települése
+(szükséges property-t , végpontot hozd létre)
+3. 2. fül: Felvitel
+Partner neve lenyílóban
+Gyümölcslé neve lenyílóban
+Dátumot beírjuk beviteli mezőben - el (vagy kiválasztjuk)
+Karton számát beviteli mezőben beírjuk
+Gombnyomásra vigye fel az adatot kiszallitasok táblába
+(szükséges class-okat, végpontot készítsd el)
+3. 3. fül: Kiszállítások
+Lenyílóban jelenjen meg a kiszállítás sorszáma-dátuma-partner neve,
+változtatásra labelben írja ki a 
+kiszállításhoz kapcsolódó kartonszámot és gyümilé nevét, amit kiszállított
+(a szükséges változtatásokat tedd meg, ahol kell)
+
+
+
+
