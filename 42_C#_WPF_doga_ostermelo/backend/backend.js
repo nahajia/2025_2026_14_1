@@ -13,7 +13,7 @@ const pool = mysql.createPool({
         host: 'localhost',
         user: 'root',
         password: '',
-        database: 'ostermelo'
+        database: 'ostermelo2026'
         })
 
 app.get('/', (req, res) => {

@@ -1,0 +1,23 @@
+
+
+1.fül: uralkodo
+class: uralkodo, Lenyilo: uralkodo neve, valtoztatásra labelbe: szul, hal, 
+ragadványneve (ha nem szerepel, akkor "nincs" szó)
+2.fül: keresés-uralk
+beviteli mező, gomb, gombnyomásra keresse meg a beírtat az uralkodó nevében
+listboxba: uralkodo nev-szul-hal
+3.fül: felvitel-ház
+Felvitel, uralkodohaz , if-név kötelező,try
+4.fül: felvitel-uralkodo
+ház lenyílóban, többi beviteli, if-név kötelező, try
+5.fül: keresés-ház
+beviteli mező, gomb, a beírtat keresse meg a ház nevében, 
+listboxba : uralkodó neve-szul-hal-ház neve
+6.fül: keresés-mettől-meddig
+lenyiloban:mettől-meddig, változtatásra labelbe:uralkodó neve, ház neve
+7.fül: felvitel-hivatal
+uralk-lenyiloban, többi beviteli, if-mettől-meddig, try
+
+
+
+
