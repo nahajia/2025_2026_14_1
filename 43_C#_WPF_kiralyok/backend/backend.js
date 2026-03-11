@@ -77,7 +77,7 @@ app.get('/uralkodo', (req, res) => {
 app.get('/uralkodohaz', (req, res) => {
         const sql=`
                 select *
-                from hivatal
+                from uralkodohaz
                 `
         pool.query(sql, (err, result) => {
         if (err) {
@@ -146,26 +146,32 @@ app.post('/keresUralkodo', (req, res) => {
             console.log(err)
             return res.status(500).json({error:"Hiba"})
         }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
 
-        return res.status(200).json({message:"Sikeres!"})
+        return res.status(200).json(result)
         })
 })
 app.post('/keresHazUralkodo', (req, res) => {
         const {szo}=req.body
         const sql=`
-                select *
+                select uralkodo.nev as nev,uralkodo.szul as szul,uralkodo.hal as hal,uralkodo.uhaz_az as uhaz_az,uralkodohaz.nev as unev
                 from uralkodo
                 inner join uralkodohaz
                 on uralkodo.uhaz_az=uralkodohaz.azon
                 where uralkodohaz.nev like ?
                 `
         pool.query(sql,[`%${szo}%`], (err, result) => {
-        if (err) {
+         if (err) {
             console.log(err)
             return res.status(500).json({error:"Hiba"})
         }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
 
-        return res.status(200).json({message:"Sikeres!"})
+        return res.status(200).json(result)
         })
 })
 app.listen(port, () => {
