@@ -33,6 +33,20 @@ namespace WpfApp1
             cbx_uralhaz.ItemsSource = bemenet;
             cbx_uralhaz.DisplayMemberPath = "nev";
             cbx_uralhaz.SelectedIndex = 0;
+
+            //mettől-meddig
+            List<uralkodo> mettolmeddig = Backend.GET("http://localhost:3000/minden").Send().As<List<uralkodo>>();
+            cbx_metmed.ItemsSource = mettolmeddig;
+            cbx_metmed.DisplayMemberPath = "mM";
+            cbx_metmed.SelectedIndex = 0;
+
+            //felvitel mettől-meddig, uralkodóház
+            List<uralkodo> uralkodoTomb = Backend.GET("http://localhost:3000/uralkodo").Send().As<List<uralkodo>>();
+            cbx_uralkodolenyil.ItemsSource = uralkodoTomb;
+            cbx_uralkodolenyil.DisplayMemberPath = "nev";
+            cbx_uralkodolenyil.SelectedIndex = 0;
+
+
         }
 
         private void Cbx_ural_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -134,6 +148,49 @@ namespace WpfApp1
 
             lbx_hazkeres.ItemsSource = kimenet;
             lbx_hazkeres.DisplayMemberPath = "nevSzulHalHaz";
+
+        }
+
+        private void Cbx_metmed_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var valasztott = cbx_metmed.SelectedItem as uralkodo;
+            lb_urnev.Content = valasztott.nev;
+            
+
+        }
+
+        private void Cbx_uralkodolenyil_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if (tbx_mettolFelvitel.Text == "" || tbx_meddigFelvitel.Text == "")
+                {
+                    MessageBox.Show("Kötelező kitölteni a mettől, meddig mezőt!");
+                }
+                else
+                {
+                    var bemenet = new
+                    {
+                        uralkodo_az = (cbx_uralkodolenyil.SelectedItem as uralkodo).azon,
+                        mettol = int.Parse(tbx_mettolFelvitel.Text),
+                        meddig = int.Parse(tbx_meddigFelvitel.Text),
+                        koronazas = int.Parse(tbx_koronazasiev.Text)
+                    };
+
+                    string kimenet = Backend.POST("http://localhost:3000/felvitelHivatal").Body(bemenet).Send().As<string>();
+                    MessageBox.Show(kimenet);
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("HIBA!");
+            }
+
 
         }
     }

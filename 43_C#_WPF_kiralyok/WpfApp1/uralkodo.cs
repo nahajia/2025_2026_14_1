@@ -15,6 +15,12 @@ namespace WpfApp1
         public int hal { get; set; }
         public int uhaz_az { get; set; }
 
+        public string unev { get; set; }
+
+        public int mettol { get; set; }
+        public int meddig { get; set; }
+
+
         public string nevSzulHal
         {
             get
@@ -28,7 +34,16 @@ namespace WpfApp1
         {
             get
             {
-                return nev + "-" + szul + "-" + hal+"-"+uhaz_az;
+                return nev + "-" + szul + "-" + hal+"-"+unev;
+            }
+        }
+
+
+        public string mM
+        {
+            get
+            {
+                return mettol + "-" + meddig;
             }
         }
     }

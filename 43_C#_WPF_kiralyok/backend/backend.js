@@ -21,7 +21,7 @@ app.get('/', (req, res) => {
 })
 app.get('/minden', (req, res) => {
         const sql=`
-                select *
+                select uralkodo.nev as nev, hivatal.mettol as mettol, hivatal.meddig as meddig
                 from uralkodo
                 inner join uralkodohaz
                 on uralkodo.uhaz_az=uralkodohaz.azon

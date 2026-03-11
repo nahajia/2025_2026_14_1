@@ -62,6 +62,22 @@
                     <Label Content="Add meg az uralkodó ház nevét" HorizontalAlignment="Left" Margin="58,33,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
+            <TabItem Header="Keresés-mikor" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="129" Margin="-2,-2,-73,0">
+                <Grid Background="#FFE5E5E5">
+                    <ComboBox Name="cbx_metmed" HorizontalAlignment="Left" Margin="79,49,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Cbx_metmed_SelectionChanged"/>
+                    <Label Name="lb_haznev" Content="Label" HorizontalAlignment="Left" Margin="83,93,0,0" VerticalAlignment="Top"/>
+                    <Label Name="lb_urnev" Content="Label" HorizontalAlignment="Left" Margin="83,137,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Felvitel hivatal" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="129" Margin="-2,-2,0,0">
+                <Grid Background="#FFE5E5E5">
+                    <ComboBox x:Name="cbx_uralkodolenyil" HorizontalAlignment="Left" Margin="79,49,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="Cbx_uralkodolenyil_SelectionChanged"/>
+                    <TextBox x:Name="tbx_mettolFelvitel" HorizontalAlignment="Left" Height="23" Margin="79,89,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="tbx_meddigFelvitel" HorizontalAlignment="Left" Height="23" Margin="79,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <TextBox x:Name="tbx_koronazasiev" HorizontalAlignment="Left" Height="23" Margin="79,145,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+                    <Button Content="Felvitel" HorizontalAlignment="Left" Margin="79,173,0,0" VerticalAlignment="Top" Width="120" Height="31" Click="Button_Click_3"/>
+                </Grid>
+            </TabItem>
         </TabControl>
 
     </Grid>
