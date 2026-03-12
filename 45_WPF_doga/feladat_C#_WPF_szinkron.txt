@@ -1,0 +1,15 @@
+3 fül legyen
+
+1. fül:
+lenyílóban film címe, változtatásra label-ben írja ki
+ az eredeti címét,évet, rendezőt, studiot
+2. fül:
+beviteli mezőbe beírunk egy szót, gombnyomásra keresse meg a szinkronban, 
+találatokat listboxba: szerep-színész-hang 
+szó kötelező, ha nem talál hiba felugróban
+3. fül:
+szinkron felvitel, film lenyíló, többit beírni, gombnyomásra felvitel
+szerep, színész ,hang kötelező, ha hiba, írja ki
+
+
+
