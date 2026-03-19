@@ -1,4 +1,5 @@
 backend_modosit.js-be dolgozz!!!
+Képernyőképeket készíts mindegyik végpont tesztről!!!
 
 1. új szakma felvitele
 2. szakma törlése
