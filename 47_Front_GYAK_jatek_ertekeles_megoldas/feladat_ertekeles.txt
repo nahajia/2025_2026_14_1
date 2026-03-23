@@ -1,0 +1,13 @@
+
+Új lenyíló menü:
+1. értékelések 
+egymás melletti dobozokba-bootstrap grid (kis képernyő 2, kozpes 3, nagy 4)
+dobozokban játék neve, becenév, értékelés, szöveg, dátum
+halvány szegély
+2. értékelés felvitele
+beviteli mezők, a játék lenyílóban, az értékelés input number
+gombnyomásra vigye fel
+3. értékelés keresése
+játék nevét írjuk be, gombnyomásra keresse meg
+kék szegélyezett, árnyékolt dobozban legyen a keresés
+felsorolásban írja ki
