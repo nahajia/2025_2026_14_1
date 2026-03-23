@@ -1,0 +1,23 @@
+backend_modosit.js-be dolgozz!!!
+Képernyőképeket készíts mindegyik végpont tesztről!!!
+
+1. új szakma felvitele
+2. szakma törlése
+3. szakma módosítása
+4. új ország felvitele
+5. ország törlése
+6. ország módosítása
+7. egy ország id alapján
+8. egy szakma id alapján
+9. egy versenyző neve, szakma neve, ország neve id alapján
+
+10. országonként hány versenyző van
+11. szakmánként hány versenyző van
+
+12. keresés: versenyzők, ország név alapján
+13. keresés: versenyzők, szakma név alapján
+
+
+14. validáció: 7-esnél csak szöveg lehessen
+15. validáció: 12-esnél keresendő min 1 karakter4
+16. validáció: 1-esnél szakmanév min 1 max 10 karakter

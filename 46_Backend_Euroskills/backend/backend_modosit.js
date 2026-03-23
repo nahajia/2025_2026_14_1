@@ -128,11 +128,15 @@ app.put('/orszagModosit/:id', (req, res) => {
         })
 })
 
-// egy ország id alapján
+// 7. egy ország id alapján
+// 14. validáció: 7-esnél csak szöveg lehessen 
 
-app.get('/egyOrszag/:id',       
+app.get('/egyOrszag/:id',
         (req, res) => {
-        const {id} =req.params        
+        const {id} =req.params
+        if (!isNaN(id)){
+                return res.status(500).json({error:"Szöveget kell megadni az ország megkersésére!"})
+        }
         const sql=`
                 select *
                 from orszag
@@ -220,6 +224,83 @@ app.get('/orszagonkentHany',
         return res.status(200).json(result)
         })
 })
+
+// 11. Szakmánként hány
+app.get('/szakmankentHany',       
+        (req, res) => {      
+        const sql=`
+                SELECT szakma.szakmaNev, COUNT(szakma.szakmaNev)
+                FROM szakma
+                INNER JOIN versenyzo
+                ON versenyzo.szakmaId = szakma.id
+                GROUP BY szakma.szakmaNev;
+                `
+        pool.query(sql, (err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
+
+        return res.status(200).json(result)
+        })
+})
+
+// 12. keresés: versenyzők, ország név alapján
+
+app.post('/orszagKeres',       
+        (req, res) => {
+        const {orszagNev}=req.body             
+        const sql=`
+                select *
+                from szakma
+                inner join versenyzo
+                on szakma.id = versenyzo.szakmaId
+                inner join orszag
+                on versenyzo.orszagId = orszag.id
+                where orszag.orszagNev LIKE ?;
+                `
+        pool.query(sql, [`%${orszagNev}%`],(err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
+
+        return res.status(200).json(result)
+        })
+})
+
+// 13. keresés: versenyzők, szakma név alapján
+app.post('/szakmaKeres',       
+        (req, res) => {
+        const {szakmaNev}=req.body             
+        const sql=`
+                select *
+                from szakma
+                inner join versenyzo
+                on szakma.id = versenyzo.szakmaId
+                inner join orszag
+                on versenyzo.orszagId = orszag.id
+                where szakma.szakmaNev LIKE ?;
+                `
+        pool.query(sql, [`%${szakmaNev}%`],(err, result) => {
+        if (err) {
+            console.log(err)
+            return res.status(500).json({error:"Hiba"})
+        }
+        if (result.length===0){
+            return res.status(404).json({error:"Nincs adat"})
+        }
+
+        return res.status(200).json(result)
+        })
+})
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
