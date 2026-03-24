@@ -50,6 +50,24 @@ const Navbar = () => {
                 <Link className="nav-link" to="/jatekModositas">Játékok módosítása</Link>
               </li>
 
+          {/*------------Lenyíló értékelés-------------*/}
+          <li className="nav-item dropdown">
+              <button 
+                className="nav-link dropdown-toggle btn btn-link"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                type="button"
+              >
+                Értékelések
+              </button>
+
+              <ul className="dropdown-menu">
+               
+                <li>
+                  <Link className="dropdown-item" to="/ErtekelesMegjelenit">Értékelések megjelenítése</Link>
+                </li>
+              </ul>
+              </li>
 
           </ul>
         </div>
