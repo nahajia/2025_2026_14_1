@@ -11,6 +11,7 @@ import KeresErtekeles from './JatekKereses/KeresesErtekeles';
 import JatekModositas from './JatekModositas/JatekModositas';
 
 import ErtekelesMegjelenit from './Ertekelesek/ErtekelesMegjelenit';
+import ErtekelesFelvitel from './Ertekelesek/ErtekelesFelvitel';
 
 
 // App komponens
@@ -30,6 +31,8 @@ function App() {
           <Route path="/jatekModositas" element={<JatekModositas />} />
 
           <Route path="/ErtekelesMegjelenit" element={<ErtekelesMegjelenit />} />
+
+          <Route path="/ErtekelesFelvitel" element={<ErtekelesFelvitel />} />
         </Routes>
       </div>
     </Router>

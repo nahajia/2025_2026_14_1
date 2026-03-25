@@ -66,6 +66,10 @@ const Navbar = () => {
                 <li>
                   <Link className="dropdown-item" to="/ErtekelesMegjelenit">Értékelések megjelenítése</Link>
                 </li>
+
+                <li>
+                  <Link className="dropdown-item" to="/ErtekelesFelvitel">Értékelések felvitele</Link>
+                </li>
               </ul>
               </li>
 
