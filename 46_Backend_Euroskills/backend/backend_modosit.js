@@ -250,9 +250,17 @@ app.get('/szakmankentHany',
 
 // 12. keresés: versenyzők, ország név alapján
 
-app.post('/orszagKeres',       
+app.post('/orszagKeres',
+        [
+            body("orszagNev")
+                .trim()
+                .isLength({min:1}).withMessage("A keresendő min 1 karakter")
+        ] ,       
         (req, res) => {
-        const {orszagNev}=req.body             
+        const {orszagNev}=req.body  
+        
+        if (handleValidationErrors(req,res)) return 
+
         const sql=`
                 select *
                 from szakma

@@ -18,6 +18,6 @@ Képernyőképeket készíts mindegyik végpont tesztről!!!
 13. keresés: versenyzők, szakma név alapján
 
 
-12. validáció: 7-esnél csak szám lehessen
-13. validáció: 12-esnél keresendő min 1 karakter4
+12. validáció: 7-esnél csak szöveg lehessen
+13. validáció: 12-esnél keresendő min 1 karakter
 14. validáció: 1-esnél szakmanév min 1 max 10 karakter

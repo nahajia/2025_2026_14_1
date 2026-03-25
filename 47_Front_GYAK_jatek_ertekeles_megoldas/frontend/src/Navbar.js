@@ -70,6 +70,10 @@ const Navbar = () => {
                 <li>
                   <Link className="dropdown-item" to="/ErtekelesFelvitel">Értékelések felvitele</Link>
                 </li>
+
+                  <li>
+                  <Link className="dropdown-item" to="/ErtekelesKereses">Értékelések keresése</Link>
+                </li>
               </ul>
               </li>
 

@@ -14,6 +14,13 @@ const ErtekelesFelvitel=()=>{
     const adatFelvitel = async(e) => {
             e.preventDefault()
             //alert(kivalasztott)
+
+            if(becenev===""){
+                alert("Becenév kitöltése kötelező")
+            }
+            else {
+            const biztos=window.confirm(`Biztosan fel akarod vinni?`)
+            if (biztos){
             const bemenet={
                 "ertekeles_game_id": kivalasztott,
                 "ertekeles_becenev": becenev,
@@ -45,6 +52,8 @@ const ErtekelesFelvitel=()=>{
             }
         
         }
+    }
+    }
     return(
         <div>
         <div>Felvitel</div>
@@ -99,6 +108,10 @@ const ErtekelesFelvitel=()=>{
                         >
                         Felvitel
                     </button>
+                    {helyes ? 
+                        <div style={{color:"green"}}>{siker} &nbsp;</div> 
+                        :  
+                        <div style={{color:"red"}}>{siker} &nbsp;</div> }
                 </div>
         </form>
         </div>
