@@ -1,0 +1,10 @@
+backend_modosit.js-be dolgozz!!!
+Képernyőképeket készíts mindegyik végpont tesztről!!!
+
+1. csapat neve és tagszám- csapat tábla
+2. új csapat felvitele
+3. csapat törlése id alapján
+4. csapat nevének, tagszámának módosítása id alapján
+5. csapat nevében való keresés- szórészlet, kimenete csapat neve tagszáma
+6. csapatonként mennyi az összpontszám: csapat neve és pontok összege
+7. 2-eshez validáció, hogy az új csapatnév hossza 1 és 10 karakter közötti

@@ -1,0 +1,18 @@
+
+Új lenyíló menü, 3 menüponttal:
+1. kiadók listája
+egymás melletti dobozokba-bootstrap grid (KÖZEPES 2, NAGY 3)
+dobozokban kiadó neve, alatta ország, alatta év
+halvány szegély
+2. kiadók keresése
+szót írjuk be, gombnyomásra keresse meg a kiadó nevében
+BEKEZDÉSEKBEN írja ki kiadó nevét, országot, évet
+- szegélyezett bekezdés legyen, külső,belső margó
+- kiadó neve aláhúzott, Arial típusú
+3. kiadók felvitele
+beviteli mezők, név-beírni, ország-beírni, év-number
+gombnyomásra vigye fel
+- biztos hogy fel akarod vinni?
+- mindhárom mezőt kötelező felvinni, egyébként ne vigye fel, felugróban írja ki
+- gomb alatt írja ki sikeres
+

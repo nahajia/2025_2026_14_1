@@ -33,8 +33,17 @@ app.get('/', (req, res) => {
 //-------------------------------------ÚJ végpontok----------------------------------
 
 //1. új szakma felvitele
-app.post('/ujSzakma', (req, res) => {
+app.post('/ujSzakma',
+        [
+            body("szakma")
+                .trim()
+                .isLength({min:1}).withMessage("A keresendő min 1 karakter")
+                .isLength({max:10}).withMessage("A keresendő max 10 karakter")
+        ], (req, res) => {
         const {id,szakma}=req.body
+        
+        if (handleValidationErrors(req,res)) return 
+
         const sql=`
                 INSERT Into szakma VALUES (?,?)
                 `
@@ -154,7 +163,7 @@ app.get('/egyOrszag/:id',
         return res.status(200).json(result)
         })
 })
-
+//8.
 app.get('/egySzakma/:id',       
         (req, res) => {
         const {id} =req.params        
@@ -175,7 +184,7 @@ app.get('/egySzakma/:id',
         return res.status(200).json(result)
         })
 })
-
+//9.
 app.get('/egyVersenyzo/:id',       
         (req, res) => {
         const {id} =req.params        
