@@ -281,7 +281,7 @@ app.post('/kiadoKeresNev', (req, res) => {
     const sql = `
         SELECT *
         FROM kiadok
-        WHERE kiado_nev LIKE ?
+        WHERE nev LIKE ?
     `
 
     pool.query(sql, [`%${szoveg}%`], (err, result) => {
