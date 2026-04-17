@@ -1,0 +1,72 @@
+.doboz {
+  border: 1px solid black;
+  margin: 20px 0px;
+  padding: 15px;
+  box-shadow: 5px 5px 5px;
+  text-align: justify;
+}
+
+.jatekCim {
+  text-align: center;
+  background-color: lightblue;
+  color: black;
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.jatekTipus {
+  font-style: italic;
+  font-size: 12px;
+}
+
+table,
+tr,
+td,
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 15px;
+  margin: auto;
+}
+
+.cim {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.keretKeres {
+  width: 50%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.alCim {
+  text-align: center;
+}
+
+.modositDoboz {
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.dobozElem {
+  margin: 2px;
+}
+
+.keret {
+  border: 1px solid black;
+  padding: 20px;
+  margin: auto;
+  border-radius: 10px;
+}
