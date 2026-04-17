@@ -7,7 +7,7 @@ import TelefonTorles from './TelefonTorles/TelefonTorles';
 import KeresKijelzo from './TelefonKereses/KeresesKijelzo';
 import TelefonModositas from './TelefonModositas/TelefonModositas';
 import TelefonFelvitel from './TelefonFelvitel/TelefonFelvitel';
-import TelefonFelvitel2 from './TelefonFelvitel/TelefonFelvitel';
+import TelefonFelvitel2 from './TelefonFelvitel/TelefonFelvitel2';
 import Nyitolap from './Nyitolap/Nyitolap';
 import KeresNev from './TelefonKereses/KeresNev';
 

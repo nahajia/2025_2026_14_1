@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Cim from "../Cim";
+import Swal from "sweetalert2";
 import LenyiloMarka from "./LenyiloMarka";
 
 const TelefonFelvitel2 = () => {
@@ -16,8 +17,23 @@ const TelefonFelvitel2 = () => {
     const [okostelefon, setOkostelefon] = useState(1)
 
 
-    const adatModosit = async (e) => {
+    const adatFelvitel = async (e) => {
         e.preventDefault();
+        setSiker("")
+        if(modell==""){
+            alert("A telefon modelljének megadása kötelező!")
+            return
+        }
+            
+            const result = await Swal.fire({
+              title: "Biztos hogy felakarod vinni az adatokat?",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonText: "Igen, felvitel",
+              cancelButtonText: "Mégse",
+            });
+        
+            if (!result.isConfirmed) return;
 
         const bemenet = {
             marka_id: Number(kivMarka),
@@ -62,32 +78,37 @@ const TelefonFelvitel2 = () => {
 
 
     return (
-        <div className="modositDoboz">
-            <form onSubmit={adatModosit}>
+        <div className="felvitelDoboz">
+            <form onSubmit={adatFelvitel}>
+
+                <div className="mb-3">
+                    Márka:
+                    <LenyiloMarka ertek={kivMarka} setKivalasztott={setKivMarka} />
+                </div>
+
                 <div className="mb-3">
                     Modell:
                     <input
                         style={{ marginLeft: "30px" }}
                         className="inputD"
                         type="text"
-                        value={egyTelefon.modell}
-                        onChange={(e) =>
-                            setEgyTelefon({ ...egyTelefon, modell: e.target.value })
+                        value={modell}
+                        onChange={(e) =>setModell(e.target.value)
                         }
                     />
                 </div>
 
                 <div className="mb-3">
                     Leírás:
-                    <input
+                    <textarea
                         style={{ marginLeft: "36px" }}
                         className="inputD"
                         type="text"
-                        value={egyTelefon.leiras}
-                        onChange={(e) =>
-                            setEgyTelefon({ ...egyTelefon, leiras: e.target.value })
+                        value={leiras}
+                        onChange={(e) => setLeiras(e.target.value)
                         }
-                    />
+                    >
+                    </textarea>
                 </div>
 
                 <div className="mb-3">
@@ -96,9 +117,8 @@ const TelefonFelvitel2 = () => {
                         style={{ marginLeft: "48px" }}
                         className="inputD"
                         type="number"
-                        value={egyTelefon.uj_ar}
-                        onChange={(e) =>
-                            setEgyTelefon({ ...egyTelefon, uj_ar: e.target.value })
+                        value={uj_ar}
+                        onChange={(e) => setUj_ar(e.target.value)
                         }
                     />
                 </div>
@@ -109,9 +129,9 @@ const TelefonFelvitel2 = () => {
                         style={{ marginLeft: "10px" }}
                         className="inputD"
                         type="number"
-                        value={egyTelefon.hasznalt_ar}
+                        value={hasznalt_ar}
                         onChange={(e) =>
-                            setEgyTelefon({ ...egyTelefon, hasznalt_ar: e.target.value })
+                            setHasznalt_ar(e.target.value )
                         }
                     />
                 </div>
@@ -123,9 +143,8 @@ const TelefonFelvitel2 = () => {
                         className="inputD"
                         type="number"
                         step="0.1"
-                        value={egyTelefon.kijelzo_merete}
-                        onChange={(e) =>
-                            setEgyTelefon({ ...egyTelefon, kijelzo_merete: e.target.value })
+                        value={kijelzo_merete}
+                        onChange={(e) => setKijelzo_merete(e.target.value )
                         }
                     />
                 </div>
@@ -134,27 +153,19 @@ const TelefonFelvitel2 = () => {
                     Típus:
                     <select
                         className="form-select"
-                        value={egyTelefon.okostelefon}
-                        onChange={(e) =>
-                            setEgyTelefon({
-                                ...egyTelefon,
-                                okostelefon: Number(e.target.value),
-                            })
-                        }
+                        value={okostelefon}
+                        onChange={(e) =>setOkostelefon( Number(e.target.value))}
                     >
                         <option value={1}>Okostelefon</option>
                         <option value={0}>Nyomógombos telefon</option>
                     </select>
                 </div>
 
-                <div className="mb-3">
-                    Márka:
-                    <LenyiloMarka ertek={kivMarka} setKivalasztott={setKivMarka} />
-                </div>
+                
 
                 <div>
                     <button type="submit" className="btn btn-primary">
-                        Módosítás
+                        Felvitel
                     </button>
 
                     {helyes ? (
