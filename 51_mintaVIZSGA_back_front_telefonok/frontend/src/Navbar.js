@@ -40,10 +40,16 @@ const Navbar = () => {
 
               <ul className="dropdown-menu">
                 <li>
+                  <Link className="dropdown-item" to="/KeresNev">
+                    Keresés név szerint
+                  </Link>
+                </li>
+                <li>
                   <Link className="dropdown-item" to="/keresKijelzo">
                     Keresés kijelző szerint
                   </Link>
                 </li>
+                
               </ul>
             </li>
 
@@ -59,8 +65,8 @@ const Navbar = () => {
 
               <ul className="dropdown-menu">
                 <li>
-                  <Link className="dropdown-item" to="/telefonFelvitel">
-                    Telefon felvitele
+                  <Link className="dropdown-item" to="/telefonFelvitel2">
+                    Telefon felvitele2
                   </Link>
                 </li>
                 <li>
