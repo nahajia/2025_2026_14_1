@@ -1,0 +1,10 @@
+Komment fevitele:
+
+1. A Komment felvitelét egészítsd ki a szükséges state-ekkel, és beviteli mezőkkel .
+2. Készítsd el azt a függvényt, amely megnyomására a komment felvitele megtörténik,
+használd a megfelelő végpontot, adatokat küldd át (a likeok számát nem kell, mert felvitelkor 0, dátum -szöveg)
+3. A becenév, komment cim és szöveg kötelező, ha hiányzik ne vigye fel és alertben írja ki, hogy mindhárom kötelező
+4. Kérdezzen rá biztosan fel akarod vinni?
+5. Ha sikeres a felvitel alertben jelezze!
+
+
