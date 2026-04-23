@@ -10,6 +10,7 @@ import JatekTorles from './JatekTorles/JatekTorles';
 import KeresErtekeles from './JatekKereses/KeresesErtekeles';
 import JatekModositas from './JatekModositas/JatekModositas';
 import KommentFelvitel from './KommentFelvitel/KommentFelvitel';
+import KommentKereses from './JatekKereses/KommentKereses';
 
 
 
@@ -30,6 +31,8 @@ function App() {
           <Route path="/jatekModositas" element={<JatekModositas />} />
 
           <Route path="/kommentFelvitel" element={<KommentFelvitel />} />
+          <Route path="/kommentKereses" element={<KommentKereses />} />
+          
         </Routes>
       </div>
     </Router>

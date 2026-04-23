@@ -41,6 +41,9 @@ const Navbar = () => {
                 <li>
                   <Link className="dropdown-item" to="/keresErtek">Keresés értékelés szerint</Link>
                 </li>
+                                <li>
+                  <Link className="dropdown-item" to="/kommentKereses">Kommentkeresés</Link>
+                </li>
               </ul>
               </li>
             

@@ -49,3 +49,10 @@ input{
 
   margin:2px;
 }
+.kommentMezo{
+  border: solid 2px rgb(4, 220, 130);
+  margin-top: 10px;
+  box-shadow: 2px 2px 2px;
+  font-style: italic;
+  padding: 5px;
+}

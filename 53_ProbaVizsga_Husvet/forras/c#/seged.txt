@@ -1,0 +1,5 @@
+List<> tomb = Backend.GET("").Send().As<List<>>();
+
+List<> kimenet = Backend.POST("").Body(bemenet).Send().As<List<>>();
+
+string kimenet = Backend.POST("").Body(bemenet).Send().As<string>();
