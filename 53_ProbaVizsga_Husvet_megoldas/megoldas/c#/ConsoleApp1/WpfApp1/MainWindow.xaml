@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="753*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Grid.ColumnSpan="2">
+            <TabItem Header="Locsolóversek">
+                <Grid Background="White">
+                    <ComboBox HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Width="774" x:Name="cbx_locsoloversek" SelectionChanged="cbx_locsoloversek_SelectionChanged"/>
+                    <Label Content="Stílus:" HorizontalAlignment="Left" Margin="102,45,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Keletkezés éve:" HorizontalAlignment="Left" Margin="53,86,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Olvasási idő:" HorizontalAlignment="Left" Margin="67,130,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Kedvelések száma:" HorizontalAlignment="Left" Margin="35,177,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Vers:" HorizontalAlignment="Left" Margin="108,217,0,0" VerticalAlignment="Top"/>
+                    <Label Content="" HorizontalAlignment="Left" Margin="154,45,0,0" VerticalAlignment="Top" Width="630" Background="NavajoWhite" x:Name="lb_stilus"/>
+                    <Label Content="" HorizontalAlignment="Left" Margin="154,86,0,0" VerticalAlignment="Top" Width="630" Background="NavajoWhite" x:Name="lb_ev"/>
+                    <Label Content="" HorizontalAlignment="Left" Margin="154,130,0,0" VerticalAlignment="Top" Width="630" Background="NavajoWhite" x:Name="lb_olvasasido"/>
+                    <Label Content="" HorizontalAlignment="Left" Margin="154,177,0,0" VerticalAlignment="Top" Width="630" Background="NavajoWhite" x:Name="lb_kedvelesek"/>
+                    <Label Content="" HorizontalAlignment="Left" Margin="154,217,0,0" VerticalAlignment="Top" Width="630" Background="NavajoWhite" x:Name="lb_vers"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Keresés">
+                <Grid Background="White">
+                    <Label Content="Szó, szórészlet:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <TextBox HorizontalAlignment="Left" Margin="104,14,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="680" x:Name="tbx_kereses"/>
+                    <Button Content="Keresés" HorizontalAlignment="Left" Margin="15,41,0,0" VerticalAlignment="Top" Width="769" x:Name="btn_kereses" Click="btn_kereses_Click"/>
+                    <ListBox Margin="10,77,10,10" Background="NavajoWhite" x:Name="lbx_kereses"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

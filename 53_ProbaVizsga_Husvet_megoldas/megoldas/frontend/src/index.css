@@ -1,0 +1,15 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.kereso-doboz {
+  border: 2px solid #0d6efd;
+  box-shadow: 8px 8px 0px rgba(13, 110, 253, 0.25);
+  background-color: white;
+  border-radius: 8px;
+}
+
+.vers-kartya-kep {
+  height: 220px;
+  object-fit: cover;
+}
