@@ -54,7 +54,7 @@ namespace WpfApp1
 
         private void btn_kereses_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(tbx_kereses.Text))
+            if (tbx_kereses.Text=="")
             {
                 MessageBox.Show("A keresőmező nem lehet üres!");
                 return;
@@ -70,7 +70,9 @@ namespace WpfApp1
                 };
                 List<Locsolovers> kimenet = Backend.POST("http://localhost:3000/versKereses").Body(bemenet).Send().As<List<Locsolovers>>();
 
-                foreach (var vers in kimenet) lbx_kereses.Items.Add($"[{vers.stilus_nev}] {vers.cim}:{vers.vers}");
+                //foreach (var vers in kimenet) lbx_kereses.Items.Add($"[{vers.stilus_nev}] {vers.cim}:{vers.vers}");
+                lbx_kereses.ItemsSource = kimenet;
+                lbx_kereses.DisplayMemberPath = "kiirt";
 
             } catch (Exception ex)
             {

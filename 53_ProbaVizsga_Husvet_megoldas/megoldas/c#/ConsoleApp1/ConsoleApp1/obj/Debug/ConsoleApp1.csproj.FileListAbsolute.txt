@@ -8,3 +8,12 @@ C:\Users\diak\Desktop\53_HarkaiDaniel\forras\c#\ConsoleApp1\ConsoleApp1\obj\Debu
 C:\Users\diak\Desktop\53_HarkaiDaniel\forras\c#\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
 C:\Users\diak\Desktop\53_HarkaiDaniel\forras\c#\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 C:\Users\diak\Desktop\53_HarkaiDaniel\forras\c#\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+d:\nahajia\2025_2026_14_1\53_ProbaVizsga_Husvet_megoldas\megoldas\c#\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+d:\nahajia\2025_2026_14_1\53_ProbaVizsga_Husvet_megoldas\megoldas\c#\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+d:\nahajia\2025_2026_14_1\53_ProbaVizsga_Husvet_megoldas\megoldas\c#\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+d:\nahajia\2025_2026_14_1\53_ProbaVizsga_Husvet_megoldas\megoldas\c#\ConsoleApp1\ConsoleApp1\bin\Debug\NetworkHelper.dll
+d:\nahajia\2025_2026_14_1\53_ProbaVizsga_Husvet_megoldas\megoldas\c#\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+d:\nahajia\2025_2026_14_1\53_ProbaVizsga_Husvet_megoldas\megoldas\c#\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+d:\nahajia\2025_2026_14_1\53_ProbaVizsga_Husvet_megoldas\megoldas\c#\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+d:\nahajia\2025_2026_14_1\53_ProbaVizsga_Husvet_megoldas\megoldas\c#\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+d:\nahajia\2025_2026_14_1\53_ProbaVizsga_Husvet_megoldas\megoldas\c#\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

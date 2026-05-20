@@ -41,6 +41,12 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
+              <Link className="nav-link" to="/keresCim">
+                Keresés cím szerint
+              </Link>
+            </li>
+
+            <li className="nav-item">
               <Link className="nav-link" to="/keresKedveles">
                 Keresés kedvelés szerint
               </Link>

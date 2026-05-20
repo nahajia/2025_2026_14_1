@@ -24,5 +24,13 @@ namespace ConsoleApp1
                 return vers.Where(x => x != ' ').Count();
             } 
         }
+
+        public string kiirt
+        {
+            get
+            {
+                return $"[{ stilus_nev}] { cim}:{vers}";
+            }
+        }
     }
 }

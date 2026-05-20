@@ -2,6 +2,7 @@ import Swal from "sweetalert2";
 import Cim from "../Cim";
 
 function Modosit({ stilus, ujNev, setUjNev }) {
+    
     const modositas = async () => {
         if (ujNev.trim() === "") {
             alert("Az új stílusnév megadása kötelező!");

@@ -1,0 +1,32 @@
+Felsorolás minta:
+<ul>
+  <li>
+    Piros tojás
+    Kedvelések száma: 4
+  </li>
+</ul>
+
+
+Kártya minta:
+<div className="card">
+  <img
+    src="http://localhost:3000/kepek/1.jpg"
+    alt="húsvét"
+    style={{ maxHeight: "180px", objectFit: "cover" }}
+  />
+
+  <div className="card-body">
+    <h5 className="card-title">Piros tojás</h5>
+    <p className="card-text">
+      <i>Stílus:</i> vicces
+    </p>
+    <p className="card-text">
+      <i>Kedvelés:</i> 40
+    </p>
+  </div>
+
+  <div className="card-footer">
+    <div> 2025 </div>
+    <div> 40 Kedvelés </div>
+  </div>
+</div>
