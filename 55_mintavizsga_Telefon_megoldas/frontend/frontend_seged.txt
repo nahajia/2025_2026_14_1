@@ -1,0 +1,36 @@
+FELSOROLÁS MINTA:
+
+<ul>
+  <li>
+    Samsung Galaxy S23
+    új ár: 320000 Ft, használt ár: 230000 Ft
+  </li>
+</ul>
+
+
+
+KÁRTYA MINTA:
+
+<div class="card text-center p-2 mb-4">
+  <div class="card-header bg-white border-0">
+    <img src="http://localhost:5000/kepek/1.jpg" alt="Samsung Galaxy S23"
+         class="img-fluid rounded"
+         style="max-height: 180px; object-fit: cover;"
+    />
+  </div>
+
+  <div class="card-body border-0">
+    <h4 class="my-1">Samsung Galaxy S23</h4>
+
+    <span class="my-1 badge bg-secondary">Okostelefon</span>
+
+    <p style="font-family: fantasy; font-style: italic;">
+      Modern, gyors okostelefon kiváló kamerával és hosszú akkumulátor-üzemidővel.
+    </p>
+  </div>
+
+  <div class="card-footer bg-white border-0 d-flex justify-content-between">
+    <div><b>📱 6.1"</b></div>
+    <div class="text-primary fs-5"><b>💰 320000 Ft</b></div>
+  </div>
+</div>
